@@ -15,6 +15,12 @@
 		<div class="site-info-container">
 			<div class="site-info">
 				<?php
+				    if ( is_home() || is_front_page() || is_archive() || is_search() || is_404() ) {
+				        get_sidebar( 'footer-frontpage' );
+				    }
+				    if ( is_single() ) {
+				        get_sidebar( 'footer-innerpage' );
+				    }
 					if ( class_exists( 'TitanFramework' ) ) {
 						$titan = TitanFramework::getInstance( 'regala' );
 						echo $titan->getOption( 'footer_copyright_text' );

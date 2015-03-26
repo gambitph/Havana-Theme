@@ -487,77 +487,33 @@ function regala_create_options() {
 	
 	
 	/**
-	 *   Default featured images
+	 *   Sections
 	 */
     
-    $image = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Default Featured Images', 'regala' ),
+    $havanaSections = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Sections', 'regala' ),
         'panel' => __( 'Theme Options & Colors', 'regala' ),
     ) );
     
-    $image->createOption( array(
-        'name' => __( 'Image 1', 'regala' ),
-        'id' => 'featured_image',
-        'type' => 'upload',
+    $sections = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 1', 'regala' ),
+        'panel' => __( 'Sections', 'regala' ),
     ) );
     
-    $image->createOption( array(
-        'name' => __( 'Image 2', 'regala' ),
-        'id' => 'featured_image2',
-        'type' => 'upload',
-    ) );
-    
-    $image->createOption( array(
-        'name' => __( 'Image 3', 'regala' ),
-        'id' => 'featured_image3',
-        'type' => 'upload',
-    ) );
-    
-    $image->createOption( array(
-        'name' => __( 'Image 4', 'regala' ),
-        'id' => 'featured_image4',
-        'type' => 'upload', 
-    ) );
-    
-    $image->createOption( array(
-        'name' => __( 'Image 5', 'regala' ),
-        'id' => 'featured_image5',
-        'type' => 'upload',
-    ) );
-    
-	
-    /**
-     *   Paging Navigation
-     */
-	
-    $navigation = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Paging Navigation', 'regala' ),
-        'panel' => __( 'Theme Options & Colors', 'regala' ),
-    ) );
-    
-    $navigation->createOption( array(
-        'name' => __( 'Background Color Navigation', 'regala' ),
-        'id' => 'navigation_bg_color',
-        'type' => 'color',
-        'default' => '#c4b371',
-        'css' => '.paging-navigation { background: value }',
-    ) );
-    
-    $navigation->createOption( array(
-        'name' => __( 'Font Navigation', 'regala' ),
-        'id' => 'navigation_fonts',
-        'type' => 'font',
-	    	   'default' => array(
-		       'color' => '#ffffff',
-		       'line-height' => '1em',
-		       'font-size' => '16px',
-		       'font-family' => 'Playfair Display',
-	           'font-weight' => '900',
-	           'font-style' => 'italic',
-	   ),
-	   'desc' => __( 'Select a Style', 'regala' ),
-	   'css' => 'ul.page-numbers a.page-numbers, ul.page-numbers span{ value }',
-    ) );
+    $sections->createOption( array(
+        'name' => __( 'Layout', 'regala' ),
+        'id' => 'section_1',
+        'type' => 'radio-image',
+        'options' => array(
+            'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
+            'layout2' => get_template_directory_uri() . '/images/header-image-default1.jpg',
+            'layout3' => get_template_directory_uri() . '/images/header-image-default2-thumb.jpg',
+            'layout4' => get_template_directory_uri() . '/images/header-image-default2.jpg',
+            'layout5' => get_template_directory_uri() . '/images/logo.png',
+            'layout6' => get_template_directory_uri() . '/images/site-icon.png',
+         ),
+    ) );    
+  
     
 	
     /**

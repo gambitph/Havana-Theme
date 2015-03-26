@@ -91,42 +91,25 @@ add_action( 'after_setup_theme', 'regala_setup' );
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function regala_widgets_init() {
+	
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'regala' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'The sidebar available in pages & blog posts', 'regala' ),
+		'name'          => __( 'Frontpage Footer Widget', 'regala' ),
+		'id'            => 'footer-frontpage',
+		'description'   => __( 'The frontpage footer widget area', 'regala' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer Left', 'regala' ),
-		'id'            => 'footer-1',
-		'description'   => __( 'The left footer widget area', 'regala' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer Right', 'regala' ),
-		'id'            => 'footer-3',
-		'description'   => __( 'The right footer widget area', 'regala' ),
+		'name'          => __( 'Innerpage Footer Widget', 'regala' ),
+		'id'            => 'footer-innerpage',
+		'description'   => __( 'The innerpage footer widget area', 'regala' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) ); 
-	register_sidebar( array(
-		'name'          => __( 'Main Menu Widgets', 'regala' ),
-		'id'            => 'main-menu',
-		'description'   => __( 'Widgets here appear in the main menu of the site.', 'regala' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
 }
 add_action( 'widgets_init', 'regala_widgets_init' );
 
