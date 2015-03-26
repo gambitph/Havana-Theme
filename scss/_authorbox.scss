@@ -1,0 +1,50 @@
+body .saboxplugin-wrap {
+    position: relative;
+    overflow: visible;
+    padding-top: 70px;
+    border: 0;
+    border-top: 1px solid #ECF0F1;
+    margin: 100px 0 0;
+	.saboxplugin-gravatar {
+	    position: absolute;
+	    left: 50%;
+	    transform: translateX(-50%) translateY(-50%);
+	    top: 0;
+	    background: #fff;
+	    border-radius: 100%;
+	    padding: 5px;
+	    border: 1px solid #ECF0F1;
+		img {
+		    border-radius: 100%;
+		    display: block;
+			width: 80px;
+			height: 80px;
+		}
+	}
+	> div[class*=saboxplugin] {
+		margin: 0 0 .5em;
+		font-size: 16px;
+		line-height: 1.6em;
+	}
+	.saboxplugin-socials {
+		padding: 0;
+		box-shadow: none;
+	}
+	.saboxplugin-authorname {
+	    font-family: 'Playfair Display', serif;
+		font-weight: 900;
+		font-style: italic;
+		font-size: 1.1em;
+	}
+}
+
+/**
+ * Not all text are centered by the plugin, this fixes it
+ */
+@media screen and (max-width: 480px) {
+	body .saboxplugin-wrap {
+		> div[class*=saboxplugin] {
+			text-align: center;
+		}
+	}
+}

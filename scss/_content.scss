@@ -1,0 +1,214 @@
+body.blog, body.archive, body.search {
+	article {
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		margin: 0;
+	}
+	.article-inner {
+		max-width: 710px;
+		width: 80%;
+		margin: 0 auto;
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    bottom: 100px;
+	}
+	.entry-title {
+		margin-top: 0;
+		-ms-word-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
+		&:empty {
+			display: none;
+		}
+	}
+	.entry-category {
+	    position: absolute;
+	    top: -20px;
+	    -webkit-transform: translateY(-100%);
+	    -moz-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+	    -o-transform: translateY(-100%);
+	    transform: translateY(-100%);
+	}
+	.entry-date {
+		position: absolute;
+		top: -20px;
+		left: -30px;
+		white-space: nowrap;
+		-webkit-transform: translateY(-100%) translateX(-100%);
+		-moz-transform: translateY(-100%) translateX(-100%);
+		-ms-transform: translateY(-100%) translateX(-100%);
+		-o-transform: translateY(-100%) translateX(-100%);
+		transform: translateY(-100%) translateX(-100%);
+	}
+	// If the category is empty and there is a date, align the date to the title
+	.entry-category:empty + .entry-date {
+		top: 0;
+		transform: translateX(-100%);
+	}
+	// If there's no title, make our content align to the top
+	.entry-title:empty ~ .entry-content {
+		margin-top: 0;
+		p:first-of-type {
+			margin-top: 0;
+		}
+	}
+	.entry-date, .entry-category {
+		font-style: italic;
+		font-size: .9em;
+	}
+	article .btn {
+		margin-top: 1.5em;
+	}
+	.entry-content p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	body.blog, body.archive, body.search {
+		.entry-date {
+			top: -20px;
+			left: auto;
+			right: 0;
+		    -webkit-transform: translateY(-100%);
+		    -moz-transform: translateY(-100%);
+		    -ms-transform: translateY(-100%);
+		    -o-transform: translateY(-100%);
+		    transform: translateY(-100%);
+		}
+	}
+}
+
+
+// Don't show fullscreen articles when in a small screen
+@media screen and (max-width: 710px) {
+	body.blog, body.archive, body.search {
+		article {
+			height: auto;
+			padding: 200px 0 50px;
+		}
+		.article-inner {
+		    position: relative;
+		    bottom: auto;
+		    top: auto;
+		    left: auto;
+		    right: auto;
+		}
+	}
+}
+@media screen and (max-height: 400px) {
+	body.blog, body.archive, body.search {
+		article {
+			height: auto;
+			padding: 200px 0 50px;
+		}
+		.article-inner {
+		    position: relative;
+		    bottom: auto;
+		    top: auto;
+		    left: auto;
+		    right: auto;
+		}
+	}
+}
+
+
+/**
+ * Single page title
+ */
+body.single {
+	.entry-category {
+	    font-style: italic;
+	    font-size: .9em;
+	}
+	.entry-date {
+	    position: absolute;
+	    left: -30px;
+	    font-style: italic;
+	    font-size: .9em;
+	    -webkit-transform: translateX(-100%);
+	    -moz-transform: translateX(-100%);
+	    -ms-transform: translateX(-100%);
+	    -o-transform: translateX(-100%);
+	    transform: translateX(-100%);
+	}
+	article.hentry {
+		width: 80%;
+		max-width: 710px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	body.single {
+		.entry-date {
+			left: auto;
+			right: 0;
+		    -webkit-transform: translateX(0%);
+		    -moz-transform: translateX(0%);
+		    -ms-transform: translateX(0%);
+		    -o-transform: translateX(0%);
+		    transform: translateX(0%);
+		}
+	}
+}
+
+
+/**
+ * Page body
+ */
+body.page {
+	article.page {
+	    margin: 50px auto 0;
+	    width: 80%;
+	    max-width: 710px;
+	}
+}
+
+
+/**
+ * Search
+ */
+body.search-no-results, body.error404 {
+	.page-title, .page-content {
+		text-align: center;
+	}
+	.page-content {
+		form {
+			margin-bottom: 1.5em;
+		}
+		.search-field {
+			display: block;
+			width: 100%;
+			margin-bottom: 1.5em;
+		}
+		.search-submit {
+			margin-bottom: 1.5em;
+		}
+	}
+	.page-content .widget-area {
+		margin-top: 50px;
+		ul {
+			padding-left: 0;
+		}
+	}
+}
+
+
+/**
+ * Password required
+ */
+article.post-password-required {
+	p:first-of-type {
+		font-weight: bold;
+	}
+	[name="post_password"] {
+	    display: block;
+	    width: 100%;
+	    margin-bottom: 1.5em;
+	}
+}

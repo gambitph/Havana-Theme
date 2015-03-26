@@ -1,0 +1,228 @@
+#site-navigation {
+    z-index: 999;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #373A3C;
+    right: 0;
+	a, a:link, a:visited {
+		display: inline-block;
+	}
+	.menu-container h4 {
+		margin-top: 0;
+	}
+}
+
+/* Small menu */
+.menu-toggle {
+    position: fixed;
+	width: 60px;
+	height: 60px;
+	background: #F2F1EF;
+	display: block;
+    text-decoration: none;
+    color: white;
+    top: 40px;
+    left: 40px;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+    box-shadow: none;
+	-webkit-transition: opacity .4s ease-in-out;
+	-moz-transition: opacity .4s ease-in-out;
+	-ms-transition: opacity .4s ease-in-out;
+	-o-transition: opacity .4s ease-in-out;
+	transition: opacity .4s ease-in-out;
+	.genericon:before {
+		-webkit-transition: color .4s ease-in-out;
+		-moz-transition: color .4s ease-in-out;
+		-ms-transition: color .4s ease-in-out;
+		-o-transition: color .4s ease-in-out;
+		transition: color .4s ease-in-out;
+	}
+}
+
+.genericon-menu {
+	&:before {
+	    color: #333;
+	    font-size: 25px;
+	}
+}
+// This fixes the retina display issue in Chrome
+#main-menu, .genericon-menu {
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+.main-navigation.toggled .menu-toggle{
+    background: transparent;
+    z-index: 999999;
+}
+
+
+// Make the menu scrollable
+.main-navigation.toggled {
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.main-navigation .menu {
+    display: none;
+}
+
+.main-navigation.toggled .menu {
+    display: block;
+}
+
+// Turn the menu icon into an X
+.main-navigation.toggled .genericon.genericon-menu:before {
+    content: '\f406';
+}
+    
+.main-navigation li { 
+	float: none; 
+}
+.main-navigation ul ul li:hover > ul {
+	left: auto;
+}
+
+.main-navigation li a { 
+    padding: 1em 1em 1em 0;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+    display: inline-block;
+}
+
+.main-navigation li li a { 
+	margin-left: 2em; 
+}
+
+.main-navigation li li li a { 
+	margin-left: 4em; 
+}
+
+.main-navigation li li li li a { 
+	margin-left: 6em; 
+}
+
+.main-navigation li li li li li a { 
+	margin-left: 8em; 
+}
+
+.main-navigation ul ul,
+.main-navigation ul ul ul {
+	position: relative;
+	top: inherit;
+	left: 0;
+	display: block;
+	float: none;
+}
+
+
+/**
+ * Menu widget area
+ */
+.menu-widgets {
+	.widget {
+		width: 100%;
+		max-width: 500px;
+		padding: 40px 0;
+		margin: 0 auto;
+		.widget-title {
+			margin-top: 0;
+		}
+		&:first-of-type {
+			padding-top: 0;
+		}
+	}
+}
+
+/**
+ * Inner menu
+ */
+.inner-menu {
+    max-width: 710px;
+    width: 80%;
+    margin: 0 auto;
+	padding: 50px 0;
+	> * {
+	    width: 48.5%;
+	    float: left;
+		margin-right: 3%;
+	}
+	> *:last-of-type {
+		margin-right: 0;
+	}
+	&:after {
+	    content: '';
+	    display: block;
+	    clear: both;
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.inner-menu {
+		> * {
+			width: 100%;
+		    float: none;
+			margin: 0;
+		}
+	}
+}
+@media screen and (max-width: 900px) {
+	.inner-menu {
+		padding-left: 50px;
+	}
+}
+
+/**
+ * Page navigation
+ */
+.paging-navigation {
+	margin: 0;
+	background: #222;
+	ul.page-numbers {
+		text-align: center;
+		padding: 0;
+		max-width: 710px;
+		width: 80%;
+		margin: 0 auto;
+	}
+	li {
+		display: inline-block;
+		span, a, a:link, a:visited {
+			margin: 10px;
+			font-family: "Playfair Display", serif;
+			font-style: italic;
+			color: #999;
+			padding: 30px 0;
+			display: inline-block;
+			opacity: 1;
+		}
+		.dots, .current {
+			opacity: .4;
+		}
+		a, a:link, a:visited {
+			&:hover {
+				opacity: .7;
+			}
+		}
+	}
+}
+@media screen and (max-width: 710px) {
+	.paging-navigation li {
+		a.page-numbers, span.page-numbers {
+			display: none;
+			font-size: 1em;
+			&.prev, &.next {
+				display: inline-block;
+			}
+		}
+	}
+}

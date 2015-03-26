@@ -1,0 +1,144 @@
+#comments {
+	width: 80%;
+	max-width: 710px;
+	margin: 0 auto;
+	  
+	background: #fff;
+    position: relative;
+    padding-top: 70px;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+	> .genericon {
+		background: #d9b760;
+		color: #fff;
+		width: 70px;
+		line-height: 70px;
+		border-radius: 100%;
+		display: block;
+		border: 5px solid #fff;
+		box-sizing: content-box;
+		box-shadow: 0 0 0 1px #eee;
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		font-size: 24px;
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		-o-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.comment-respond:first-child #reply-title {
+		margin-top: 0;
+	}
+	
+	.comments-title {
+		margin-top: 0;
+		margin-bottom: 50px;
+		text-align: center;
+	}
+	
+	article {
+		padding: 0;
+		margin-bottom: 50px;
+	}
+	
+	.comment-list {
+		padding-left: 0;
+	}
+	
+	.comment-content {
+		background: #fafafa;
+		padding: 30px;
+		border: 1px solid #ECF0F1;
+		border-radius: 3px;
+		margin-top: 30px;
+		*:first-child {
+			margin-top: 0;
+		}
+		*:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.comment-author {
+		vertical-align: top;
+		display: inline-block;
+		margin: 3px 15px 3px 80px;
+		img {
+			border-radius: 100%;
+			position: absolute;
+			left: 0;
+		}
+	}
+	.comment-meta {
+		position: relative;
+	}
+	.comment-metadata {
+		margin-left: 80px;
+		> a, > a:visited {
+			color: #999;
+			font-style: italic;
+			font-size: 14px;
+			&:before {
+				content: '\f303';
+				font-family: genericons;
+				color: #999;
+				font-size: 20px;
+				vertical-align: middle;
+				font-style: normal;
+			}
+			&:hover {
+				color: #d9b760;
+			}
+		}
+	}
+	
+	.edit-link {
+		float: right;
+	}
+	.comment-reply-link {
+		float: right;
+		margin-top: 1em;
+		font-size: .8em;
+		padding: .8em 1.1em;
+		&:after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+	}
+	
+	.logged-in-as {
+		font-style: italic;
+		font-size: 14px;
+	}
+	textarea {
+		padding: .5em .8em;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	
+	ol ol {
+		margin-left: 30px;
+	}
+	li {
+		list-style: none;
+	}
+	
+	#respond {
+		margin-bottom: 30px;
+		input {
+			margin-left: 10px;
+			&[type="submit"] {
+				margin-left: 0;
+			}
+		}
+		.comment-reply-title {
+			margin-top: 0;
+		}
+	}
+	.pingback {
+		padding: .3em 0;
+	}
+}

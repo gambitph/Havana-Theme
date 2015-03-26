@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){return;$("body:not(.single):not(.page) .hentry").height($(window).height()),$(window).resize(function(){$("body:not(.single):not(.page) .hentry").height($(window).height())})});

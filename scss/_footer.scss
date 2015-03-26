@@ -1,0 +1,80 @@
+.footer-widgets {
+    max-width: 710px;
+    margin: 0 auto 1.5em;
+	width: 80%;
+	padding-top: 50px;
+}
+
+.footer-widgets #footer-left,
+.footer-widgets #footer-right {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+	width: 48.5%;
+	margin: 0;
+}
+
+.footer-widgets #footer-left {
+    margin-right: 3%;
+}
+
+.footer-widgets #footer-left.widget {
+    margin: 0;
+}
+
+.footer-widgets .widget-title {
+    margin-top: 0;
+}
+body.single .padding {
+    display: block;
+}
+
+.footer-widgets.active-footers-1 {
+	#footer-left, #footer-right {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 710px) {
+    .footer-widgets {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .footer-widgets #footer-left,
+    .footer-widgets #footer-right {
+        width: 100%;
+        margin: 0;
+    }
+    
+    body.single.footer-widgets #footer-left,
+    body.single.footer-widgets #footer-right {
+        width: 100%;
+        margin: 0;
+    }
+    
+    body.single .padding {
+        width: 100%
+    }
+}
+
+
+/**
+ * Footer copyright
+ */
+.site-info {
+	width: 80%;
+	max-width: 710px;
+	margin: 0 auto;
+	padding: 1em 0;
+	font-size: .8em;
+	font-style: italic;
+}
+
+
+#site-navigation #main-menu .inner-menu .menu-widgets .widget_tag_cloud .tagcloud a {
+    background: none;
+    border: none;
+}
