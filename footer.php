@@ -18,7 +18,7 @@
 				    if ( is_home() || is_front_page() || is_archive() || is_search() || is_404() ) {
 				        get_sidebar( 'footer-frontpage' );
 				    }
-				    if ( is_single() ) {
+				    if ( is_single() || is_page() ) {
 				        get_sidebar( 'footer-innerpage' );
 				    }
 					if ( class_exists( 'TitanFramework' ) ) {
