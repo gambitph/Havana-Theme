@@ -7,14 +7,14 @@
  */
 
 
-add_action( 'tf_create_options', 'regala_create_options' );
+add_action( 'tf_create_options', 'havana_create_options' );
 
 /**
  * Initialize Titan & options here
  */
-function regala_create_options() {
+function havana_create_options() {
 
-	$titan = TitanFramework::getInstance( 'regala' );
+	$titan = TitanFramework::getInstance( 'havana' );
 	
 	
 	/**
@@ -23,29 +23,29 @@ function regala_create_options() {
 	 */
 	
 	$section = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Logo', 'regala' ),
-	    'panel' => __( 'Theme Options & Colors', 'regala' ),
+	    'name' => __( 'Logo', 'havana' ),
+	    'panel' => __( 'Theme Options & Colors', 'havana' ),
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Background Color of the Logo', 'regala' ),
+	    'name' => __( 'Background Color of the Logo', 'havana' ),
 	    'id' => 'logo_bg_color',
 	    'type' => 'color',
-	    'desc' => __( 'This color changes the background of your logo', 'regala' ),
+	    'desc' => __( 'This color changes the background of your logo', 'havana' ),
 	    'default' => '#000000',
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Text Color of the Logo', 'regala' ),
+	    'name' => __( 'Text Color of the Logo', 'havana' ),
 	    'id' => 'logo_text_color',
 	    'type' => 'color',
-	    'desc' => __( 'This color changes the color of the text logo', 'regala' ),
+	    'desc' => __( 'This color changes the color of the text logo', 'havana' ),
 	    'default' => '#FFFFFF',
 		'css' => '.site-title, .site-logo-link { &:visited, &:link, & { &, &:hover { color: value } } }',
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Background Opacity', 'regala' ),
+	    'name' => __( 'Background Opacity', 'havana' ),
 	    'id' => 'logo_bg_opacity',
 	    'type' => 'number',
 		'default' => '0.5',
@@ -55,7 +55,7 @@ function regala_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Hover Opacity', 'regala' ),
+	    'name' => __( 'Hover Opacity', 'havana' ),
 	    'id' => 'logo_hover_opacity',
 	    'type' => 'number',
 		'default' => '0.7',
@@ -70,16 +70,16 @@ function regala_create_options() {
 	 * Fonts
 	 */
 	$section = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Fonts', 'regala' ),
-		'panel' => __( 'Theme Options & Colors', 'regala' ),
-		'desc' => __( 'Change the fonts used across your site', 'regala' ),
+	    'name' => __( 'Fonts', 'havana' ),
+		'panel' => __( 'Theme Options & Colors', 'havana' ),
+		'desc' => __( 'Change the fonts used across your site', 'havana' ),
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Headings Font', 'regala' ),
+	    'name' => __( 'Headings Font', 'havana' ),
 	    'id' => 'headings_font',
 	    'type' => 'font',
-	    'desc' => __( 'Select the font for all headings in the site', 'regala' ),
+	    'desc' => __( 'Select the font for all headings in the site', 'havana' ),
 		'show_color' => false,
 		'show_font_size' => false,
 	    // 'show_font_weight' => false,
@@ -101,10 +101,10 @@ function regala_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 1 Size', 'regala' ),
+	    'name' => __( 'Heading 1 Size', 'havana' ),
 	    'id' => 'heading1_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h1</code> headings', 'regala' ),
+	    'desc' => __( 'The size of all <code>h1</code> headings', 'havana' ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -125,10 +125,10 @@ function regala_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 2 Size', 'regala' ),
+	    'name' => __( 'Heading 2 Size', 'havana' ),
 	    'id' => 'heading2_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h2</code> headings', 'regala' ),
+	    'desc' => __( 'The size of all <code>h2</code> headings', 'havana' ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -151,10 +151,10 @@ function regala_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 3 Size', 'regala' ),
+	    'name' => __( 'Heading 3 Size', 'havana' ),
 	    'id' => 'heading3_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h3</code> headings', 'regala' ),
+	    'desc' => __( 'The size of all <code>h3</code> headings', 'havana' ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -177,10 +177,10 @@ function regala_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 4 Size', 'regala' ),
+	    'name' => __( 'Heading 4 Size', 'havana' ),
 	    'id' => 'heading4_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h4</code> headings', 'regala' ),
+	    'desc' => __( 'The size of all <code>h4</code> headings', 'havana' ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -204,10 +204,10 @@ function regala_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 5 Size', 'regala' ),
+	    'name' => __( 'Heading 5 Size', 'havana' ),
 	    'id' => 'heading5_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h5</code> headings', 'regala' ),
+	    'desc' => __( 'The size of all <code>h5</code> headings', 'havana' ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -230,10 +230,10 @@ function regala_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 6 Size', 'regala' ),
+	    'name' => __( 'Heading 6 Size', 'havana' ),
 	    'id' => 'heading6_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h6</code> headings', 'regala' ),
+	    'desc' => __( 'The size of all <code>h6</code> headings', 'havana' ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -256,10 +256,10 @@ function regala_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Body Font', 'regala' ),
+	    'name' => __( 'Body Font', 'havana' ),
 	    'id' => 'body_font',
 	    'type' => 'font',
-	    'desc' => __( 'The normal body font', 'regala' ),
+	    'desc' => __( 'The normal body font', 'havana' ),
 		// 'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -281,10 +281,10 @@ function regala_create_options() {
 	) );
 	
 	// $section->createOption( array(
-// 	    'name' => __( 'Smaller Body Font', 'regala' ),
+// 	    'name' => __( 'Smaller Body Font', 'havana' ),
 // 	    'id' => 'body_font_small',
 // 	    'type' => 'font',
-// 	    'desc' => __( 'The smaller body font found in various places in the theme', 'regala' ),
+// 	    'desc' => __( 'The smaller body font found in various places in the theme', 'havana' ),
 // 		'show_font_family' => false,
 // 		'show_color' => false,
 // 		// 'show_font_size' => false,
@@ -320,13 +320,13 @@ function regala_create_options() {
 	 */
 	
 	$social = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Social Icons', 'regala' ),
-        'panel' => __( 'Theme Options & Colors', 'regala' ),
+	    'name' => __( 'Social Icons', 'havana' ),
+        'panel' => __( 'Theme Options & Colors', 'havana' ),
 		'desc' => 'Social link icons are placed on the top of your site. Paste the links to your social profiles below.'
 	) );
 	
 	$social->createOption( array(
-	    'name' => __( 'Icon Color', 'regala' ),
+	    'name' => __( 'Icon Color', 'havana' ),
 	    'id' => 'social_link_color',
 	    'type' => 'color',
 	    'default' => '#FFFFFF',
@@ -335,7 +335,7 @@ function regala_create_options() {
 	
 	for ( $i = 0; $i <= 10; $i++ ) {
 		$social->createOption( array(
-		    'name' => $i ? '' : __( 'Social Links', 'regala' ),
+		    'name' => $i ? '' : __( 'Social Links', 'havana' ),
 		    'id' => 'social_' . $i,
 		    'type' => 'text',
 		) );
@@ -347,19 +347,19 @@ function regala_create_options() {
 	 */
 	
 	$menu = $titan->createThemeCustomizerSection( array(
-	   'name' => __( 'Main Menu', 'regala' ),
-	   'panel' => __( 'Theme Options & Colors', 'regala' ),
+	   'name' => __( 'Main Menu', 'havana' ),
+	   'panel' => __( 'Theme Options & Colors', 'havana' ),
 	) );
 	
 	$menu->createOption( array(
-	   'name' => __( 'Menu Title', 'regala' ),
+	   'name' => __( 'Menu Title', 'havana' ),
 	   'id' => 'menu_title',
 	   'type' => 'text',
-	   'default' => __( 'Menu', 'regala' ),
+	   'default' => __( 'Menu', 'havana' ),
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Button Icon Color', 'regala' ),
+	    'name' => __( 'Menu Button Icon Color', 'havana' ),
 	    'id' => 'menu_icon_color',
 	    'type' => 'color',
 		'default' => '#616f7c',
@@ -367,7 +367,7 @@ function regala_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	   'name' => __( 'Menu Button Background Color', 'regala' ),
+	   'name' => __( 'Menu Button Background Color', 'havana' ),
 	   'id' => 'menu_color',
 	   'type' => 'color',
 	   'default' => '#DADFE1',
@@ -375,7 +375,7 @@ function regala_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Button Opacity', 'regala' ),
+	    'name' => __( 'Menu Button Opacity', 'havana' ),
 	    'id' => 'menu_opacity',
 	    'type' => 'number',
 		'default' => '0.7',
@@ -386,7 +386,7 @@ function regala_create_options() {
 	) );
     
     $menu->createOption( array(
-	    'name' => __( 'Menu Button Hover Opacity', 'regala' ),
+	    'name' => __( 'Menu Button Hover Opacity', 'havana' ),
 	    'id' => 'menu_hover_opacity',
 	    'type' => 'number',
 		'default' => '1',
@@ -397,7 +397,7 @@ function regala_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Area Background Color', 'regala' ),
+	    'name' => __( 'Menu Area Background Color', 'havana' ),
 	    'id' => 'inner_menu_color',
 	    'type' => 'color',
 		'default' => '#373A3C',
@@ -405,7 +405,7 @@ function regala_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Area Text Color', 'regala' ),
+	    'name' => __( 'Menu Area Text Color', 'havana' ),
 	    'id' => 'inner_menu_text_color',
 	    'type' => 'color',
 		'default' => '#d3d2d1',
@@ -423,7 +423,7 @@ function regala_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Area Link Color', 'regala' ),
+	    'name' => __( 'Menu Area Link Color', 'havana' ),
 	    'id' => 'inner_menu_link_color',
 	    'type' => 'color',
 		'default' => '#d9b760',
@@ -439,16 +439,22 @@ function regala_create_options() {
 	
 	
 	/**
-	 *   Tagline font and color options
+	 *   Header & Tagline options
 	 */
-
-	$font = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Header & Tagline', 'regala' ),
-	    'panel' => __( 'Theme Options & Colors', 'regala' ),
+     $header = $titan->createThemeCustomizerSection( array(
+  	    'name' => 'header_image',
+     ) );
+    
+	$header->createOption( array(
+	   'name' => __( 'Background Color', 'havana' ),
+	   'panel' => __( 'Header Image', 'havan' ),
+	   'id' => 'background_color',
+	   'type' => 'color',
+	   'desc' => __( 'You can choose your background color of the header if you dont have background image', 'havana' ),
+	   'css' => 'body.home #masthead { background: value }',
 	) );
-	
-	$font->createOption( array(
-	   'name' => __( 'Tagline Heading Font', 'regala' ),
+	$header->createOption( array(
+	   'name' => __( 'Tagline Heading Font', 'havana' ),
 	   'id' => 'tagline_font',
 	   'type' => 'font',
 	   'default' => array(
@@ -459,24 +465,24 @@ function regala_create_options() {
            'font-weight' => '900',
            'font-style' => 'italic',
 	   ),
-	   'desc' => __( 'Select a Style', 'regala' ),
+	   'desc' => __( 'Select a Style', 'havana' ),
 	   'css' => '#masthead-inner.tagline h1.site-description { value }',
 	) );
 	
-	$font->createOption( array(
-	    'name' => __( 'Tagline Caption Text Color', 'regala' ),
+	$header->createOption( array(
+	    'name' => __( 'Tagline Caption Text Color', 'havana' ),
 	    'id' => 'tagline_caption_color',
 	    'type' => 'color',
-	    'desc' => __( 'This color changes the color of the tagline caption', 'regala' ),
+	    'desc' => __( 'This color changes the color of the tagline caption', 'havana' ),
 	    'default' => '#FFFFFF',
 		'css' => 'p.tagline-description { color: value }',
 	) );
 	
-	$font->createOption( array(
-	    'name' => __( 'Bottom Offset', 'regala' ),
+	$header->createOption( array(
+	    'name' => __( 'Bottom Offset', 'havana' ),
 	    'id' => 'tagline_area_bottom_offset',
 	    'type' => 'number',
-	    'desc' => __( 'You can move your tagline upward by adding a bottom offset. A lower number means your tagline will be closer to the bottom of the screen', 'regala' ),
+	    'desc' => __( 'You can move your tagline upward by adding a bottom offset. A lower number means your tagline will be closer to the bottom of the screen', 'havana' ),
 		'unit' => '%',
 	    'default' => '20',
 		'min' => '0',
@@ -491,17 +497,17 @@ function regala_create_options() {
 	 */
     
     $havanaSections = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Sections', 'regala' ),
-        'panel' => __( 'Theme Options & Colors', 'regala' ),
+        'name' => __( 'Sections', 'havana' ),
+        'panel' => __( 'Theme Options & Colors', 'havana' ),
     ) );
     
     $sections = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Section 1', 'regala' ),
-        'panel' => __( 'Sections', 'regala' ),
+        'name' => __( 'Section 1', 'havana' ),
+        'panel' => __( 'Sections', 'havana' ),
     ) );
     
     $sections->createOption( array(
-        'name' => __( 'Layout', 'regala' ),
+        'name' => __( 'Layout', 'havana' ),
         'id' => 'section_1',
         'type' => 'radio-image',
         'options' => array(
@@ -521,12 +527,12 @@ function regala_create_options() {
      */
     
     $footer = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Footer Widgets Area', 'regala' ),
-        'panel' => __( 'Theme Options & Colors', 'regala' ),
+        'name' => __( 'Footer Widgets Area', 'havana' ),
+        'panel' => __( 'Theme Options & Colors', 'havana' ),
     ) );
     
     $footer->createOption( array(
-        'name' => __( 'Background Color', 'regala' ),
+        'name' => __( 'Background Color', 'havana' ),
         'id' => 'footer_bg_color',
         'type' => 'color',
         'default' => '#FFFFFF',
@@ -534,7 +540,7 @@ function regala_create_options() {
     ) );
     
     $footer->createOption( array(
-        'name' => __( 'Text Color', 'regala' ),
+        'name' => __( 'Text Color', 'havana' ),
         'id' => 'footer_text_color',
         'type' => 'color',
         'default' => '#616f7c',
@@ -543,7 +549,7 @@ function regala_create_options() {
     ) );
     
     $footer->createOption( array(
-        'name' => __( 'Text Link Color', 'regala' ),
+        'name' => __( 'Text Link Color', 'havana' ),
         'id' => 'footer_link_color',
         'type' => 'color',
         'default' => '#d9b760',
@@ -556,20 +562,20 @@ function regala_create_options() {
 	 */
 	
 	$section = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Footer Copyright Area', 'regala' ),
-		'panel' => __( 'Theme Options & Colors', 'regala' ),
-		'desc' => __( 'Colors & text of the bottom-most copyright area of the site', 'regala' ),
+	    'name' => __( 'Footer Copyright Area', 'havana' ),
+		'panel' => __( 'Theme Options & Colors', 'havana' ),
+		'desc' => __( 'Colors & text of the bottom-most copyright area of the site', 'havana' ),
 	) );
 
 	$section->createOption( array(
-	    'name' => __( 'Copyright Text', 'regala' ),
+	    'name' => __( 'Copyright Text', 'havana' ),
 	    'id' => 'footer_copyright_text',
 	    'type' => 'text',
 		'default' => '&copy; ' . date( 'Y' ) . ', theme created by Gambit',
 	) );
 
 	$section->createOption( array(
-	    'name' => __( 'Background Color', 'regala' ),
+	    'name' => __( 'Background Color', 'havana' ),
 	    'id' => 'footer_copyright_bg_color',
 	    'type' => 'color',
 		'default' => '#000000',
@@ -577,7 +583,7 @@ function regala_create_options() {
 	) );
 
 	$section->createOption( array(
-	    'name' => __( 'Text Color', 'regala' ),
+	    'name' => __( 'Text Color', 'havana' ),
 	    'id' => 'footer_copyright_text_color',
 	    'type' => 'color',
 		'default' => '#ffffff',
@@ -594,7 +600,7 @@ function regala_create_options() {
     ) );
 	
 	$caption->createOption( array(
-		'name' => __( 'Home Page Tagline Caption', 'regala' ),
+		'name' => __( 'Home Page Tagline Caption', 'havana' ),
 		'id' => 'home_caption',
 		'type' => 'text',
 	) );
@@ -604,7 +610,7 @@ function regala_create_options() {
     ) );
 	
 	$section->createOption( array(
-		'name' => __( 'Main / Highlight / Link Color', 'regala' ),
+		'name' => __( 'Main / Highlight / Link Color', 'havana' ),
 		'id' => 'highlight',
 		'type' => 'color',
 		'default' => '#d9b760',
