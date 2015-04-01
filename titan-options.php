@@ -495,33 +495,1672 @@ function havana_create_options() {
 	/**
 	 *   Sections
 	 */
-    
-    $havanaSections = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Sections', 'havana' ),
-        'panel' => __( 'Theme Options & Colors', 'havana' ),
+
+    // Section 1
+    $section1 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 1 - Layout', 'havana' ),
+        'panel' =>  __('Section 1', 'havana'),
     ) );
     
-    $sections = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Section 1', 'havana' ),
-        'panel' => __( 'Sections', 'havana' ),
-    ) );
-    
-    $sections->createOption( array(
-        'name' => __( 'Layout', 'havana' ),
-        'id' => 'section_1',
-        'type' => 'radio-image',
-        'options' => array(
-            'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
-            'layout2' => get_template_directory_uri() . '/images/header-image-default1.jpg',
-            'layout3' => get_template_directory_uri() . '/images/header-image-default2-thumb.jpg',
-            'layout4' => get_template_directory_uri() . '/images/header-image-default2.jpg',
-            'layout5' => get_template_directory_uri() . '/images/logo.png',
-            'layout6' => get_template_directory_uri() . '/images/site-icon.png',
+    $section1->createOption( array(
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_layout',
+	    'type' => 'radio-image',
+	    'options' => array(
+             'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
+             'layout2' => get_template_directory_uri() . '/images/header-image-default1.jpg',
+             'layout3' => get_template_directory_uri() . '/images/header-image-default2-thumb.jpg',
+             'layout4' => get_template_directory_uri() . '/images/header-image-default2.jpg',
+             'layout5' => get_template_directory_uri() . '/images/logo.png',
+             'layout6' => get_template_directory_uri() . '/images/site-icon.png',
          ),
-    ) );    
-  
+    ) );
     
+    $section1Box1 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 1 - Box 1 Content', 'havana' ),
+        'panel' =>  __('Section 1', 'havana'),
+    ) );
+    
+    $section1Box1->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box1_post/page',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+    
+    $section1Box1->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box1_bg_image',
+        'type' => 'upload',
+    ) );
+    
+    $section1Box1->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box1_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+	    'default' => '#FFFFFF',
+		//'css' => 'p.tagline-description { color: value }',
+    ) );
+    
+    $section1Box1->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box1_text',
+        'type' => 'text',
+    ) );
 	
+	$section1Box1->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box1_description',
+        'type' => 'text',
+    ) );
+    
+	$section1Box1->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box1_border',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+    
+    $section1Box1->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box1_hover_effect',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+    
+    $section1Box2 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 1 - Box 2 Content', 'havana' ),
+        'panel' =>  __('Section 1', 'havana'),
+    ) );
+    
+    $section1Box2->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box2_post/page',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+    
+    $section1Box2->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box2_bg_image',
+        'type' => 'upload',
+    ) );
+    
+    $section1Box2->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box2_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+	    'default' => '#FFFFFF',
+		//'css' => 'p.tagline-description { color: value }',
+    ) );
+    
+    $section1Box2->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box2_text',
+        'type' => 'text',
+    ) );
+	
+	$section1Box2->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box2_description',
+        'type' => 'text',
+    ) );
+    
+	$section1Box2->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box2_border',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+    
+    $section1Box2->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box2_hover_effect',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+    
+    $section1Box3 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 1 - Box 3 Content', 'havana' ),
+        'panel' =>  __('Section 1', 'havana'),
+    ) );
+    
+    $section1Box3->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box3_post/page',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+    
+    $section1Box3->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box3_bg_image',
+        'type' => 'upload',
+    ) );
+    
+    $section1Box3->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box3_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+	    'default' => '#FFFFFF',
+		//'css' => 'p.tagline-description { color: value }',
+    ) );
+    
+    $section1Box3->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box3_text',
+        'type' => 'text',
+    ) );
+	
+	$section1Box3->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box3_description',
+        'type' => 'text',
+    ) );
+    
+	$section1Box3->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box3_border',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+    
+    $section1Box3->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box3_hover_effect',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+    
+    $section1Box4 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 1 - Box 4 Content', 'havana' ),
+        'panel' =>  __('Section 1', 'havana'),
+    ) );
+    
+    $section1Box4->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box4_post/page',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+    
+    $section1Box4->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box4_bg_image',
+        'type' => 'upload',
+    ) );
+    
+    $section1Box4->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box4_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+	    'default' => '#FFFFFF',
+		//'css' => 'p.tagline-description { color: value }',
+    ) );
+    
+    $section1Box4->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box4_text',
+        'type' => 'text',
+    ) );
+	
+	$section1Box4->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box4_description',
+        'type' => 'text',
+    ) );
+    
+	$section1Box4->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box4_border',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+    
+    $section1Box4->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 1', 'havana' ),
+        'id' => 'section1_box4_hover_effect',
+	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+    
+    
+    // Section 2
+    $section2 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 2 - Layout ', 'havana' ),
+        'panel' =>  __('Section 2', 'havana'),
+    ) );
+
+    $section2->createOption( array(
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_layout',
+   	    'type' => 'radio-image',
+   	    'options' => array(
+                'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
+                'layout2' => get_template_directory_uri() . '/images/header-image-default1.jpg',
+                'layout3' => get_template_directory_uri() . '/images/header-image-default2-thumb.jpg',
+                'layout4' => get_template_directory_uri() . '/images/header-image-default2.jpg',
+                'layout5' => get_template_directory_uri() . '/images/logo.png',
+                'layout6' => get_template_directory_uri() . '/images/site-icon.png',
+        ),
+    ) );
+    
+    $section2Box1 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 2 - Box 1 Content', 'havana' ),
+        'panel' =>  __('Section 2', 'havana'),
+    ) );
+
+    $section2Box1->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box1_post/page',
+   	    'type' => 'select',
+               'options' => array(
+                   '1' => 'Page',
+                   '2' => 'Post',
+               ),
+        'default' => '2',
+    ) );
+
+    $section2Box1->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box1_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section2Box1->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box1_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section2Box1->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box1_text',
+        'type' => 'text',
+    ) );
+
+   	$section2Box1->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box1_description',
+        'type' => 'text',
+    ) );
+
+   	$section2Box1->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box1_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section2Box1->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box1_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section2Box2 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 2 - Box 2 Content', 'havana' ),
+        'panel' =>  __('Section 2', 'havana'),
+    ) );
+
+    $section2Box2->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box2_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section2Box2->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box2_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section2Box2->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box2_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section2Box2->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box2_text',
+        'type' => 'text',
+    ) );
+
+   	$section2Box2->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box2_description',
+        'type' => 'text',
+    ) );
+
+   	$section2Box2->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box2_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section2Box2->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box2_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section2Box3 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 2 - Box 3 Content', 'havana' ),
+        'panel' =>  __('Section 2', 'havana'),
+    ) );
+
+    $section2Box3->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box3_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section2Box3->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box3_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section2Box3->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box3_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section2Box3->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box3_text',
+        'type' => 'text',
+    ) );
+
+    $section2Box3->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box3_description',
+        'type' => 'text',
+    ) );
+
+   	$section2Box3->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box3_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section2Box3->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box3_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section2Box4 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 2 - Box 4 Content', 'havana' ),
+        'panel' =>  __('Section 2', 'havana'),
+    ) );
+
+    $section2Box4->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box4_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section2Box4->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box4_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section2Box4->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box4_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section2Box4->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box4_text',
+        'type' => 'text',
+    ) );
+
+    $section2Box4->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box4_description',
+        'type' => 'text',
+    ) );
+
+   	$section2Box4->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box4_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section2Box4->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 2', 'havana' ),
+        'id' => 'section2_box4_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+       
+    
+    // Section 3
+    $section3 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 3 - Layout', 'havana' ),
+        'panel' =>  __('Section 3', 'havana'),
+    ) );
+
+    $section3->createOption( array(
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_layout',
+   	    'type' => 'radio-image',
+   	    'options' => array(
+                'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
+                'layout2' => get_template_directory_uri() . '/images/header-image-default1.jpg',
+                'layout3' => get_template_directory_uri() . '/images/header-image-default2-thumb.jpg',
+                'layout4' => get_template_directory_uri() . '/images/header-image-default2.jpg',
+                'layout5' => get_template_directory_uri() . '/images/logo.png',
+                'layout6' => get_template_directory_uri() . '/images/site-icon.png',
+        ),
+    ) );
+
+    $section3Box1 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 3 - Box 1 Content', 'havana' ),
+        'panel' =>  __('Section 3', 'havana'),
+    ) );
+
+    $section3Box1->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box1_post/page',
+   	    'type' => 'select',
+               'options' => array(
+                   '1' => 'Page',
+                   '2' => 'Post',
+               ),
+        'default' => '2',
+    ) );
+
+    $section3Box1->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box1_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section3Box1->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box1_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section3Box1->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box1_text',
+        'type' => 'text',
+    ) );
+
+   	$section3Box1->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box1_description',
+        'type' => 'text',
+    ) );
+
+   	$section3Box1->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box1_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section3Box1->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box1_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section3Box2 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 3 - Box 2 Content', 'havana' ),
+        'panel' =>  __('Section 3', 'havana'),
+    ) );
+
+    $section3Box2->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box2_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section3Box2->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box2_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section3Box2->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box2_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section3Box2->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box2_text',
+        'type' => 'text',
+    ) );
+
+   	$section3Box2->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box2_description',
+        'type' => 'text',
+    ) );
+
+   	$section3Box2->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box2_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section3Box2->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box2_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section3Box3 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 3 - Box 3 Content', 'havana' ),
+        'panel' =>  __('Section 3', 'havana'),
+    ) );
+
+    $section3Box3->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box3_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section3Box3->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box3_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section3Box3->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box3_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section3Box3->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box3_text',
+        'type' => 'text',
+    ) );
+
+    $section3Box3->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box3_description',
+        'type' => 'text',
+    ) );
+
+   	$section3Box3->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box3_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section3Box3->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box3_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section3Box4 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 3 - Box 4 Content', 'havana' ),
+        'panel' =>  __('Section 3', 'havana'),
+    ) );
+
+    $section3Box4->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box4_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section3Box4->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box4_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section3Box4->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box4_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section3Box4->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box4_text',
+        'type' => 'text',
+    ) );
+
+    $section3Box4->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box4_description',
+        'type' => 'text',
+    ) );
+
+   	$section3Box4->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box4_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section3Box4->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 3', 'havana' ),
+        'id' => 'section3_box4_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+    
+    
+    // Section 4
+    $section4 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 4 - Layout', 'havana' ),
+        'panel' =>  __('Section 4', 'havana'),
+    ) );
+
+    $section4->createOption( array(
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_layout',
+   	    'type' => 'radio-image',
+   	    'options' => array(
+                'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
+                'layout2' => get_template_directory_uri() . '/images/header-image-default1.jpg',
+                'layout3' => get_template_directory_uri() . '/images/header-image-default2-thumb.jpg',
+                'layout4' => get_template_directory_uri() . '/images/header-image-default2.jpg',
+                'layout5' => get_template_directory_uri() . '/images/logo.png',
+                'layout6' => get_template_directory_uri() . '/images/site-icon.png',
+        ),
+    ) );
+
+    $section4Box1 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 4 - Box 1 Content', 'havana' ),
+        'panel' =>  __('Section 4', 'havana'),
+    ) );
+
+    $section4Box1->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box1_post/page',
+   	    'type' => 'select',
+               'options' => array(
+                   '1' => 'Page',
+                   '2' => 'Post',
+               ),
+        'default' => '2',
+    ) );
+
+    $section4Box1->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box1_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section4Box1->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box1_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section4Box1->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box1_text',
+        'type' => 'text',
+    ) );
+
+   	$section4Box1->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box1_description',
+        'type' => 'text',
+    ) );
+
+   	$section4Box1->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box1_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section4Box1->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box1_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section4Box2 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 4 - Box 2 Content', 'havana' ),
+        'panel' =>  __('Section 4', 'havana'),
+    ) );
+
+    $section4Box2->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box2_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section4Box2->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box2_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section4Box2->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box2_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section4Box2->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box2_text',
+        'type' => 'text',
+    ) );
+
+   	$section4Box2->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box2_description',
+        'type' => 'text',
+    ) );
+
+   	$section4Box2->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box2_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section4Box2->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box2_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section4Box3 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 4 - Box 3 Content', 'havana' ),
+        'panel' =>  __('Section 4', 'havana'),
+    ) );
+
+    $section4Box3->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box3_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section4Box3->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box3_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section4Box3->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box3_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section4Box3->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box3_text',
+        'type' => 'text',
+    ) );
+
+    $section4Box3->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box3_description',
+        'type' => 'text',
+    ) );
+
+   	$section4Box3->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box3_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section4Box3->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box3_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section4Box4 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 4 - Box 4 Content', 'havana' ),
+        'panel' =>  __('Section 4', 'havana'),
+    ) );
+
+    $section4Box4->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box4_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section4Box4->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box4_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section4Box4->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box4_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section4Box4->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box4_text',
+        'type' => 'text',
+    ) );
+
+    $section4Box4->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box4_description',
+        'type' => 'text',
+    ) );
+
+   	$section4Box4->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box4_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section4Box4->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 4', 'havana' ),
+        'id' => 'section4_box4_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+    
+    
+    // Section 5
+    $section5 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 5 - Layout', 'havana' ),
+        'panel' =>  __('Section 5', 'havana'),
+    ) );
+
+    $section5->createOption( array(
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_layout',
+   	    'type' => 'radio-image',
+   	    'options' => array(
+                'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
+                'layout2' => get_template_directory_uri() . '/images/header-image-default1.jpg',
+                'layout3' => get_template_directory_uri() . '/images/header-image-default2-thumb.jpg',
+                'layout4' => get_template_directory_uri() . '/images/header-image-default2.jpg',
+                'layout5' => get_template_directory_uri() . '/images/logo.png',
+                'layout6' => get_template_directory_uri() . '/images/site-icon.png',
+        ),
+    ) );
+
+    $section5Box1 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 5 - Box 1 Content', 'havana' ),
+        'panel' =>  __('Section 5', 'havana'),
+    ) );
+
+    $section5Box1->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box1_post/page',
+   	    'type' => 'select',
+               'options' => array(
+                   '1' => 'Page',
+                   '2' => 'Post',
+               ),
+        'default' => '2',
+    ) );
+
+    $section5Box1->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box1_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section5Box1->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box1_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section5Box1->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box1_text',
+        'type' => 'text',
+    ) );
+
+   	$section5Box1->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box1_description',
+        'type' => 'text',
+    ) );
+
+   	$section5Box1->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box1_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section5Box1->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box1_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section5Box2 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 5 - Box 2 Content', 'havana' ),
+        'panel' =>  __('Section 5', 'havana'),
+    ) );
+
+    $section5Box2->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box2_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section5Box2->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box2_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section5Box2->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box2_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section5Box2->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box2_text',
+        'type' => 'text',
+    ) );
+
+   	$section5Box2->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box2_description',
+        'type' => 'text',
+    ) );
+
+   	$section5Box2->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box2_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section5Box2->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box2_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section5Box3 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 5 - Box 3 Content', 'havana' ),
+        'panel' =>  __('Section 5', 'havana'),
+    ) );
+
+    $section5Box3->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box3_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section5Box3->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box3_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section5Box3->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box3_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section5Box3->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box3_text',
+        'type' => 'text',
+    ) );
+
+    $section5Box3->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box3_description',
+        'type' => 'text',
+    ) );
+
+   	$section5Box3->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box3_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section5Box3->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box3_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+
+    $section5Box4 = $titan->createThemeCustomizerSection( array(
+        'name' => __( 'Section 5 - Box 4 Content', 'havana' ),
+        'panel' =>  __('Section 5', 'havana'),
+    ) );
+
+    $section5Box4->createOption( array(
+        'name' => __( 'Post/Page', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box4_post/page',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Page',
+                '2' => 'Post',
+            ),
+        'default' => '2',
+    ) );
+
+    $section5Box4->createOption( array(
+        'name' => __( 'Background Image', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box4_bg_image',
+        'type' => 'upload',
+    ) );
+
+    $section5Box4->createOption( array(
+        'name' => __( 'Box Background Color', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box4_bg_color',
+        'type' => 'color',
+        'desc' => __( 'This color set the color of the box content', 'havana' ),
+   	    'default' => '#FFFFFF',
+   		//'css' => 'p.tagline-description { color: value }',
+    ) );
+
+    $section5Box4->createOption( array(
+        'name' => __( 'Box Title', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box4_text',
+        'type' => 'text',
+    ) );
+
+    $section5Box4->createOption( array(
+        'name' => __( 'Box Description', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box4_description',
+        'type' => 'text',
+    ) );
+
+   	$section5Box4->createOption( array(
+        'name' => __( 'Box Border', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box4_border',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Sample 1',
+                '2' => 'Sample 2',
+                '3' => 'Sample 3',
+                '4' => 'Sample 4',
+                '5' => 'Sample 5',
+            ),
+        'default' => '1',
+    ) );
+
+    $section5Box4->createOption( array(
+        'name' => __( 'Hover Effect', 'havana' ),
+        'panel' => __( 'Section 5', 'havana' ),
+        'id' => 'section5_box4_hover_effect',
+   	    'type' => 'select',
+            'options' => array(
+                '1' => 'Zoom In',
+                '2' => 'Zoom In',
+                '3' => 'Zoom In',
+                '4' => 'Zoom In',
+                '5' => 'Zoom In',
+            ),
+        'default' => '1',
+    ) );
+    
+       
     /**
      *   Color option for footer widgets
      */
