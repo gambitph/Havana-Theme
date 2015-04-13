@@ -137,6 +137,19 @@ if ( is_single() || is_page() ) {
 			<?php
 		}
 		?>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+    		<div class="main-menu">
+				<?php
+				$title = __( 'Menu', 'regala' );
+				if ( class_exists( 'TitanFramework' ) ) {
+					$titan = TitanFramework::getInstance( 'regala' );
+					$title = $titan->getOption( 'menu_title' );
+				}
+				?>
+				<h4><?php echo esc_html( $title ) ?></h4>
+			    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</div>
+    	</nav>
 	</header>
 	<?php endif;
 	
@@ -145,25 +158,7 @@ if ( is_single() || is_page() ) {
 	 * Main menu
 	 */	
 	?>
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
-		<div id="main-menu" class="menu">
-			<div class="inner-menu">
-				<div class="menu-container">
-					<?php
-					$title = __( 'Menu', 'regala' );
-					if ( class_exists( 'TitanFramework' ) ) {
-						$titan = TitanFramework::getInstance( 'regala' );
-						$title = $titan->getOption( 'menu_title' );
-					}
-					?>
-					<h4><?php echo esc_html( $title ) ?></h4>
-				    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				</div>
-			    <?php get_sidebar( 'main-menu' ); ?>
-			</div>
-        </div>
-	</nav>
+	
 	<?php
 	
 	

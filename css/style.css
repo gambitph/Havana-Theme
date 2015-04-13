@@ -936,7 +936,7 @@ input[type="search"] {
 .main-navigation .menu li {
   margin: auto 20px; }
 
-.main-navigation .menu ul ul {
+body .main-navigation ul ul {
   text-align: left; }
 
 .main-navigation .menu li li {

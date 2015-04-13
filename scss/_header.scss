@@ -28,12 +28,11 @@ body.page, body.single, body.archive, body.search, body.error404 {
 	position: relative;
 }
 #site-top {
-	position: absolute;;
-	top: 0;
-	right: 40px;
-	z-index: 1;
+	text-align: center;
 }
-
+#site-top a {
+    transform: translateY(-350%);
+}
 .site-title, .site-logo-link {
 	display: inline-block;
     background: black;
