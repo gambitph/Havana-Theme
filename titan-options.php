@@ -497,21 +497,22 @@ function havana_create_options() {
 	 */
          
     for ( $sectionIndex = 1; $sectionIndex <= 5; $sectionIndex++ ) {
+        $sectionLayout = $titan->createThemeCustomizerSection( array(
+             'name' => __( 'Section ' . $sectionIndex . ' Layout ', 'havana' ),
+             'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+          ) );
+          
+          $sectionLayout->createOption( array(
+              'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+              'id' => 'section' . $sectionIndex . 'layout',
+              'type' => 'radio-image',
+              'options' => array(
+                  'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
+              ),
+          ) );
+        
         for ( $boxIndex = 1; $boxIndex <= 4; $boxIndex++ ) {
-             $sectionLayout = $titan->createThemeCustomizerSection( array(
-                 'name' => __( 'Section ' . $sectionIndex . ' Layout ', 'havana' ),
-                 'panel' =>  __('Section ' . $sectionIndex, 'havana'),
-              ) );
-              
-              $sectionLayout->createOption( array(
-                  'panel' =>  __('Section ' . $sectionIndex, 'havana'),
-                  'id' => 'section' . $sectionIndex . 'layout',
-                  'type' => 'radio-image',
-                  'options' => array(
-                      'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
-                  ),
-              ) );
-              
+                           
              $sectionBox = $titan->createThemeCustomizerSection( array(
                  'name' => __( 'Section ' . $sectionIndex . ' - Box ' . $boxIndex . ' Content', 'havana' ),
                  'panel' =>  __('Section ' . $sectionIndex, 'havana'),
