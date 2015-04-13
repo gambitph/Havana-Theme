@@ -23,29 +23,29 @@ function havana_create_options() {
 	 */
 	
 	$section = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Logo', 'havana' ),
-	    'panel' => __( 'Theme Options & Colors', 'havana' ),
+	    'name' => sprintf(__( 'Logo', 'havana' ) ),
+	    'panel' => sprintf(__( 'Theme Options & Colors', 'havana' ) ),
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Background Color of the Logo', 'havana' ),
+	    'name' => sprintf(__( 'Background Color of the Logo', 'havana' ) ),
 	    'id' => 'logo_bg_color',
 	    'type' => 'color',
-	    'desc' => __( 'This color changes the background of your logo', 'havana' ),
+	    'desc' => sprintf(__( 'This color changes the background of your logo', 'havana' ) ),
 	    'default' => '#000000',
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Text Color of the Logo', 'havana' ),
+	    'name' => sprintf(__( 'Text Color of the Logo', 'havana' ) ),
 	    'id' => 'logo_text_color',
 	    'type' => 'color',
-	    'desc' => __( 'This color changes the color of the text logo', 'havana' ),
+	    'desc' => sprintf(__( 'This color changes the color of the text logo', 'havana' ) ),
 	    'default' => '#FFFFFF',
 		'css' => '.site-title, .site-logo-link { &:visited, &:link, & { &, &:hover { color: value } } }',
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Background Opacity', 'havana' ),
+	    'name' => sprintf(__( 'Background Opacity', 'havana' ) ),
 	    'id' => 'logo_bg_opacity',
 	    'type' => 'number',
 		'default' => '0.5',
@@ -55,7 +55,7 @@ function havana_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Hover Opacity', 'havana' ),
+	    'name' => sprintf(__( 'Hover Opacity', 'havana' ) ),
 	    'id' => 'logo_hover_opacity',
 	    'type' => 'number',
 		'default' => '0.7',
@@ -70,16 +70,16 @@ function havana_create_options() {
 	 * Fonts
 	 */
 	$section = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Fonts', 'havana' ),
-		'panel' => __( 'Theme Options & Colors', 'havana' ),
-		'desc' => __( 'Change the fonts used across your site', 'havana' ),
+	    'name' => sprintf(__( 'Fonts', 'havana' ) ),
+		'panel' => sprintf(__( 'Theme Options & Colors', 'havana' ) ),
+		'desc' => sprintf(__( 'Change the fonts used across your site', 'havana' ) ),
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Headings Font', 'havana' ),
+	    'name' => sprintf(__( 'Headings Font', 'havana' ) ),
 	    'id' => 'headings_font',
 	    'type' => 'font',
-	    'desc' => __( 'Select the font for all headings in the site', 'havana' ),
+	    'desc' => sprintf(__( 'Select the font for all headings in the site', 'havana' ) ),
 		'show_color' => false,
 		'show_font_size' => false,
 	    // 'show_font_weight' => false,
@@ -101,10 +101,10 @@ function havana_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 1 Size', 'havana' ),
+	    'name' => sprintf(__( 'Heading 1 Size', 'havana' ) ),
 	    'id' => 'heading1_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h1</code> headings', 'havana' ),
+	    'desc' => sprintf(__( 'The size of all <code>h1</code> headings', 'havana' ) ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -125,10 +125,10 @@ function havana_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 2 Size', 'havana' ),
+	    'name' => sprintf(__( 'Heading 2 Size', 'havana' ) ),
 	    'id' => 'heading2_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h2</code> headings', 'havana' ),
+	    'desc' => sprintf(__( 'The size of all <code>h2</code> headings', 'havana' ) ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -151,10 +151,10 @@ function havana_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 3 Size', 'havana' ),
+	    'name' => sprintf(__( 'Heading 3 Size', 'havana' ) ),
 	    'id' => 'heading3_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h3</code> headings', 'havana' ),
+	    'desc' => sprintf(__( 'The size of all <code>h3</code> headings', 'havana' ) ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -177,10 +177,10 @@ function havana_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 4 Size', 'havana' ),
+	    'name' => sprintf(__( 'Heading 4 Size', 'havana' ) ),
 	    'id' => 'heading4_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h4</code> headings', 'havana' ),
+	    'desc' => sprintf(__( 'The size of all <code>h4</code> headings', 'havana' ) ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -204,10 +204,10 @@ function havana_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 5 Size', 'havana' ),
+	    'name' => sprintf(__( 'Heading 5 Size', 'havana' ) ),
 	    'id' => 'heading5_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h5</code> headings', 'havana' ),
+	    'desc' => sprintf(__( 'The size of all <code>h5</code> headings', 'havana' ) ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -230,10 +230,10 @@ function havana_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Heading 6 Size', 'havana' ),
+	    'name' => sprintf(__( 'Heading 6 Size', 'havana' ) ),
 	    'id' => 'heading6_font',
 	    'type' => 'font',
-	    'desc' => __( 'The size of all <code>h6</code> headings', 'havana' ),
+	    'desc' => sprintf(__( 'The size of all <code>h6</code> headings', 'havana' ) ),
 		'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -256,10 +256,10 @@ function havana_create_options() {
 	) );
 	
 	$section->createOption( array(
-	    'name' => __( 'Body Font', 'havana' ),
+	    'name' => sprintf(__( 'Body Font', 'havana' ) ),
 	    'id' => 'body_font',
 	    'type' => 'font',
-	    'desc' => __( 'The normal body font', 'havana' ),
+	    'desc' => sprintf(__( 'The normal body font', 'havana' ) ),
 		// 'show_font_family' => false,
 		'show_color' => false,
 		// 'show_font_size' => false,
@@ -320,13 +320,13 @@ function havana_create_options() {
 	 */
 	
 	$social = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Social Icons', 'havana' ),
-        'panel' => __( 'Theme Options & Colors', 'havana' ),
+	    'name' => sprintf(__( 'Social Icons', 'havana' ) ),
+        'panel' => sprintf(__( 'Theme Options & Colors', 'havana' ) ),
 		'desc' => 'Social link icons are placed on the top of your site. Paste the links to your social profiles below.'
 	) );
 	
 	$social->createOption( array(
-	    'name' => __( 'Icon Color', 'havana' ),
+	    'name' => sprintf(__( 'Icon Color', 'havana' ) ),
 	    'id' => 'social_link_color',
 	    'type' => 'color',
 	    'default' => '#FFFFFF',
@@ -335,7 +335,7 @@ function havana_create_options() {
 	
 	for ( $i = 0; $i <= 10; $i++ ) {
 		$social->createOption( array(
-		    'name' => $i ? '' : __( 'Social Links', 'havana' ),
+		    'name' => $i ? '' : sprintf(__( 'Social Links', 'havana' ) ),
 		    'id' => 'social_' . $i,
 		    'type' => 'text',
 		) );
@@ -347,19 +347,19 @@ function havana_create_options() {
 	 */
 	
 	$menu = $titan->createThemeCustomizerSection( array(
-	   'name' => __( 'Main Menu', 'havana' ),
-	   'panel' => __( 'Theme Options & Colors', 'havana' ),
+	   'name' => sprintf(__( 'Main Menu', 'havana' ) ),
+	   'panel' => sprintf(__( 'Theme Options & Colors', 'havana' ) ),
 	) );
 	
 	$menu->createOption( array(
-	   'name' => __( 'Menu Title', 'havana' ),
+	   'name' => sprintf(__( 'Menu Title', 'havana' ) ),
 	   'id' => 'menu_title',
 	   'type' => 'text',
-	   'default' => __( 'Menu', 'havana' ),
+	   'default' => sprintf(__( 'Menu', 'havana' ) ),
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Button Icon Color', 'havana' ),
+	    'name' => sprintf(__( 'Menu Button Icon Color', 'havana' ) ),
 	    'id' => 'menu_icon_color',
 	    'type' => 'color',
 		'default' => '#616f7c',
@@ -367,7 +367,7 @@ function havana_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	   'name' => __( 'Menu Button Background Color', 'havana' ),
+	   'name' => sprintf(__( 'Menu Button Background Color', 'havana' ) ),
 	   'id' => 'menu_color',
 	   'type' => 'color',
 	   'default' => '#DADFE1',
@@ -375,7 +375,7 @@ function havana_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Button Opacity', 'havana' ),
+	    'name' => sprintf(__( 'Menu Button Opacity', 'havana' ) ),
 	    'id' => 'menu_opacity',
 	    'type' => 'number',
 		'default' => '0.7',
@@ -386,7 +386,7 @@ function havana_create_options() {
 	) );
     
     $menu->createOption( array(
-	    'name' => __( 'Menu Button Hover Opacity', 'havana' ),
+	    'name' => sprintf(__( 'Menu Button Hover Opacity', 'havana' ) ),
 	    'id' => 'menu_hover_opacity',
 	    'type' => 'number',
 		'default' => '1',
@@ -397,7 +397,7 @@ function havana_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Area Background Color', 'havana' ),
+	    'name' => sprintf(__( 'Menu Area Background Color', 'havana' ) ),
 	    'id' => 'inner_menu_color',
 	    'type' => 'color',
 		'default' => '#373A3C',
@@ -405,7 +405,7 @@ function havana_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Area Text Color', 'havana' ),
+	    'name' => sprintf(__( 'Menu Area Text Color', 'havana' ) ),
 	    'id' => 'inner_menu_text_color',
 	    'type' => 'color',
 		'default' => '#d3d2d1',
@@ -423,7 +423,7 @@ function havana_create_options() {
 	) );
 	
 	$menu->createOption( array(
-	    'name' => __( 'Menu Area Link Color', 'havana' ),
+	    'name' => sprintf(__( 'Menu Area Link Color', 'havana' ) ),
 	    'id' => 'inner_menu_link_color',
 	    'type' => 'color',
 		'default' => '#d9b760',
@@ -446,15 +446,15 @@ function havana_create_options() {
      ) );
     
 	$header->createOption( array(
-	   'name' => __( 'Background Color', 'havana' ),
-	   'panel' => __( 'Header Image', 'havan' ),
+	   'name' => sprintf(__( 'Background Color', 'havana' ) ),
+	   'panel' => sprintf(__( 'Header Image', 'havan' ) ),
 	   'id' => 'background_color',
 	   'type' => 'color',
-	   'desc' => __( 'You can choose your background color of the header if you dont have background image', 'havana' ),
+	   'desc' => sprintf(__( 'You can choose your background color of the header if you dont have background image', 'havana' ) ),
 	   'css' => 'body.home #masthead { background: value }',
 	) );
 	$header->createOption( array(
-	   'name' => __( 'Tagline Heading Font', 'havana' ),
+	   'name' => sprintf(__( 'Tagline Heading Font', 'havana' ) ),
 	   'id' => 'tagline_font',
 	   'type' => 'font',
 	   'default' => array(
@@ -465,24 +465,24 @@ function havana_create_options() {
            'font-weight' => '900',
            'font-style' => 'italic',
 	   ),
-	   'desc' => __( 'Select a Style', 'havana' ),
+	   'desc' => sprintf(__( 'Select a Style', 'havana' ) ),
 	   'css' => '#masthead-inner.tagline h1.site-description { value }',
 	) );
 	
 	$header->createOption( array(
-	    'name' => __( 'Tagline Caption Text Color', 'havana' ),
+	    'name' => sprintf(__( 'Tagline Caption Text Color', 'havana' ) ),
 	    'id' => 'tagline_caption_color',
 	    'type' => 'color',
-	    'desc' => __( 'This color changes the color of the tagline caption', 'havana' ),
+	    'desc' => sprintf(__( 'This color changes the color of the tagline caption', 'havana' ) ),
 	    'default' => '#FFFFFF',
 		'css' => 'p.tagline-description { color: value }',
 	) );
 	
 	$header->createOption( array(
-	    'name' => __( 'Bottom Offset', 'havana' ),
+	    'name' => sprintf(__( 'Bottom Offset', 'havana' ) ),
 	    'id' => 'tagline_area_bottom_offset',
 	    'type' => 'number',
-	    'desc' => __( 'You can move your tagline upward by adding a bottom offset. A lower number means your tagline will be closer to the bottom of the screen', 'havana' ),
+	    'desc' => sprintf(__( 'You can move your tagline upward by adding a bottom offset. A lower number means your tagline will be closer to the bottom of the screen', 'havana' ) ),
 		'unit' => '%',
 	    'default' => '20',
 		'min' => '0',
@@ -498,12 +498,12 @@ function havana_create_options() {
          
     for ( $sectionIndex = 1; $sectionIndex <= 5; $sectionIndex++ ) {
         $sectionLayout = $titan->createThemeCustomizerSection( array(
-             'name' => __( 'Section ' . $sectionIndex . ' Layout ', 'havana' ),
-             'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+             'name' => sprintf( __( 'Section %d Layout ', 'havana' ), $sectionIndex ),
+             'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
           ) );
           
           $sectionLayout->createOption( array(
-              'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+              'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
               'id' => 'section' . $sectionIndex . 'layout',
               'type' => 'radio-image',
               'options' => array(
@@ -514,12 +514,12 @@ function havana_create_options() {
         for ( $boxIndex = 1; $boxIndex <= 4; $boxIndex++ ) {
                            
              $sectionBox = $titan->createThemeCustomizerSection( array(
-                 'name' => __( 'Section ' . $sectionIndex . ' - Box ' . $boxIndex . ' Content', 'havana' ),
-                 'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+                 'name' => sprintf(__( 'Section %1$s - Box %2$s Content', 'havana' ), $sectionIndex, $boxIndex ),
+                 'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
               ) );
               
               $sectionBox->createOption( array(
-                  'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
                   'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'post/page',
                   'type' => 'select',
                   'options' => array(
@@ -530,15 +530,15 @@ function havana_create_options() {
               ) );
 
               $sectionBox->createOption( array(
-                  'name' => __( 'Background Image', 'havana' ),
-                  'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+                  'name' => sprintf(__( 'Background Image', 'havana' ) ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
                   'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'bg_image',
                   'type' => 'upload',
               ) );
 
               $sectionBox->createOption( array(
-                  'name' => __( 'Box Background Color', 'havana' ),
-                  'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+                  'name' => sprintf(__( 'Box Background Color', 'havana' ) ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
                   'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'bg_color',
                   'type' => 'color',
                   'desc' => __( 'This color set the color of the box content', 'havana' ),
@@ -547,22 +547,22 @@ function havana_create_options() {
               ) );
 
               $sectionBox->createOption( array(
-                  'name' => __( 'Box Title', 'havana' ),
-                  'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+                  'name' => sprintf(__( 'Box Title', 'havana' ) ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
                   'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'text',
                   'type' => 'text',
               ) );
 
               $sectionBox->createOption( array(
-                  'name' => __( 'Box Description', 'havana' ),
-                  'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+                  'name' => sprintf(__( 'Box Description', 'havana' ) ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
                   'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'description',
                   'type' => 'text',
               ) );
 
               $sectionBox->createOption( array(
-                  'name' => __( 'Box Border', 'havana' ),
-                  'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+                  'name' => sprintf(__( 'Box Border', 'havana' ) ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
                   'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'border',
                   'type' => 'select',
                       'options' => array(
@@ -576,8 +576,8 @@ function havana_create_options() {
               ) );
 
               $sectionBox->createOption( array(
-                  'name' => __( 'Hover Effect', 'havana' ),
-                  'panel' =>  __('Section ' . $sectionIndex, 'havana'),
+                  'name' => sprintf(__( 'Hover Effect', 'havana' ) ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
                   'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'effect',
                   'type' => 'select',
                       'options' => array(
@@ -599,12 +599,12 @@ function havana_create_options() {
      */
     
     $footer = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Footer Widgets Area', 'havana' ),
-        'panel' => __( 'Theme Options & Colors', 'havana' ),
+        'name' => sprintf(__( 'Footer Widgets Area', 'havana' ) ), 
+        'panel' => sprintf(__( 'Theme Options & Colors', 'havana' ) ),
     ) );
     
     $footer->createOption( array(
-        'name' => __( 'Background Color', 'havana' ),
+        'name' => sprintf(__( 'Background Color', 'havana' ) ),
         'id' => 'footer_bg_color',
         'type' => 'color',
         'default' => '#FFFFFF',
@@ -612,7 +612,7 @@ function havana_create_options() {
     ) );
     
     $footer->createOption( array(
-        'name' => __( 'Text Color', 'havana' ),
+        'name' => sprintf(__( 'Text Color', 'havana' ) ),
         'id' => 'footer_text_color',
         'type' => 'color',
         'default' => '#616f7c',
@@ -621,7 +621,7 @@ function havana_create_options() {
     ) );
     
     $footer->createOption( array(
-        'name' => __( 'Text Link Color', 'havana' ),
+        'name' => sprintf(__( 'Text Link Color', 'havana' ) ),
         'id' => 'footer_link_color',
         'type' => 'color',
         'default' => '#d9b760',
@@ -634,20 +634,20 @@ function havana_create_options() {
 	 */
 	
 	$section = $titan->createThemeCustomizerSection( array(
-	    'name' => __( 'Footer Copyright Area', 'havana' ),
-		'panel' => __( 'Theme Options & Colors', 'havana' ),
-		'desc' => __( 'Colors & text of the bottom-most copyright area of the site', 'havana' ),
+	    'name' => sprintf(__( 'Footer Copyright Area', 'havana' ) ),
+		'panel' => sprintf(__( 'Theme Options & Colors', 'havana' ) ),
+		'desc' => sprintf(__( 'Colors & text of the bottom-most copyright area of the site', 'havana' ) ),
 	) );
 
 	$section->createOption( array(
-	    'name' => __( 'Copyright Text', 'havana' ),
+	    'name' => sprintf(__( 'Copyright Text', 'havana' ) ),
 	    'id' => 'footer_copyright_text',
 	    'type' => 'text',
 		'default' => '&copy; ' . date( 'Y' ) . ', theme created by Gambit',
 	) );
 
 	$section->createOption( array(
-	    'name' => __( 'Background Color', 'havana' ),
+	    'name' => sprintf(__( 'Background Color', 'havana' ) ),
 	    'id' => 'footer_copyright_bg_color',
 	    'type' => 'color',
 		'default' => '#000000',
@@ -655,7 +655,7 @@ function havana_create_options() {
 	) );
 
 	$section->createOption( array(
-	    'name' => __( 'Text Color', 'havana' ),
+	    'name' => sprintf(__( 'Text Color', 'havana' ) ),
 	    'id' => 'footer_copyright_text_color',
 	    'type' => 'color',
 		'default' => '#ffffff',
@@ -672,7 +672,7 @@ function havana_create_options() {
     ) );
 	
 	$caption->createOption( array(
-		'name' => __( 'Home Page Tagline Caption', 'havana' ),
+		'name' => sprintf(__( 'Home Page Tagline Caption', 'havana' ) ),
 		'id' => 'home_caption',
 		'type' => 'text',
 	) );
@@ -682,7 +682,7 @@ function havana_create_options() {
     ) );
 	
 	$section->createOption( array(
-		'name' => __( 'Main / Highlight / Link Color', 'havana' ),
+		'name' => sprintf(__( 'Main / Highlight / Link Color', 'havana' ) ),
 		'id' => 'highlight',
 		'type' => 'color',
 		'default' => '#d9b760',
