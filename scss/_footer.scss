@@ -5,20 +5,26 @@
 	padding-top: 50px;
 }
 
-.footer-widgets #footer-left,
-.footer-widgets #footer-right {
+.footer-widgets #footer-frontpage,
+.footer-widgets #footer-innerpage {
     display: inline-block;
     vertical-align: top;
     padding: 0;
 	width: 48.5%;
 	margin: 0;
+	font-family: "Playfair Display";
+	font-weight: 900;
+	font-size: 16px;
 }
 
-.footer-widgets #footer-left {
+.site-footer .site-info-container {
+    background: #ffffff;
+}
+.footer-widgets #footer-frontpage {
     margin-right: 3%;
 }
 
-.footer-widgets #footer-left.widget {
+.footer-widgets #footer-frontpage.widget {
     margin: 0;
 }
 
@@ -30,7 +36,7 @@ body.single .padding {
 }
 
 .footer-widgets.active-footers-1 {
-	#footer-left, #footer-right {
+	#footer-frontpage, #footer-innerpage {
 		width: 100%;
 		margin: 0;
 	}
@@ -43,14 +49,14 @@ body.single .padding {
         display: block;
     }
     
-    .footer-widgets #footer-left,
-    .footer-widgets #footer-right {
+    .footer-widgets #footer-frontpage,
+    .footer-widgets #footer-innerpage {
         width: 100%;
         margin: 0;
     }
     
-    body.single.footer-widgets #footer-left,
-    body.single.footer-widgets #footer-right {
+    body.single.footer-widgets #footer-frontpage,
+    body.single.footer-widgets #footer-innerpage {
         width: 100%;
         margin: 0;
     }
