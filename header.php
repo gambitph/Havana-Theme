@@ -88,7 +88,7 @@ if ( is_single() || is_page() ) {
 				<h1 class="site-description"><?php bloginfo( 'description' ) ?></h1>
 				<?php endif; ?>	
 		
-				<?php regala_get_home_caption() ?>
+				<?php havana_get_home_caption() ?>
         
 	        </div>
 			<?php

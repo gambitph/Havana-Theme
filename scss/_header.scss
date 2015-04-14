@@ -31,7 +31,12 @@ body.page, body.single, body.archive, body.search, body.error404 {
 	text-align: center;
 }
 #site-top a {
-    transform: translateY(-350%);
+    transform: translateY(-220%);
+    background: none;
+}
+#site-top img {
+    height: 140px;
+    width: auto;
 }
 .site-title, .site-logo-link {
 	display: inline-block;
