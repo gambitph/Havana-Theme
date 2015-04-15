@@ -504,7 +504,7 @@ function havana_create_options() {
           
           $sectionLayout->createOption( array(
               'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
-              'id' => 'section' . $sectionIndex . 'layout',
+              'id' => 'section_' . $sectionIndex . '_layout',
               'type' => 'radio-image',
               'options' => array(
                   'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
@@ -520,7 +520,7 @@ function havana_create_options() {
               
               $sectionBox->createOption( array(
                   'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
-                  'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'post/page',
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_post/page',
                   'type' => 'select',
                   'options' => array(
                       '1' => 'Page',
@@ -532,14 +532,14 @@ function havana_create_options() {
               $sectionBox->createOption( array(
                   'name' => __( 'Background Image', 'havana' ),
                   'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
-                  'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'bg_image',
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_bg_image',
                   'type' => 'upload',
               ) );
 
               $sectionBox->createOption( array(
                   'name' => __( 'Box Background Color', 'havana' ),
                   'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
-                  'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'bg_color',
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_bg_color',
                   'type' => 'color',
                   'desc' => __( 'This color set the color of the box content', 'havana' ),
                   'default' => '#FFFFFF',
@@ -549,21 +549,21 @@ function havana_create_options() {
               $sectionBox->createOption( array(
                   'name' => __( 'Box Title', 'havana' ),
                   'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
-                  'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'text',
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_text',
                   'type' => 'text',
               ) );
 
               $sectionBox->createOption( array(
                   'name' => __( 'Box Description', 'havana' ),
                   'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
-                  'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'description',
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_description',
                   'type' => 'text',
               ) );
 
               $sectionBox->createOption( array(
                   'name' => __( 'Box Border', 'havana' ),
                   'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
-                  'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'border',
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_border',
                   'type' => 'select',
                       'options' => array(
                           '1' => 'Sample 1',
@@ -578,7 +578,7 @@ function havana_create_options() {
               $sectionBox->createOption( array(
                   'name' => __( 'Hover Effect', 'havana' ),
                   'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
-                  'id' => 'section' . $sectionIndex . 'box' . $boxIndex . 'effect',
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_effect',
                   'type' => 'select',
                       'options' => array(
                           '1' => 'Zoom In',
