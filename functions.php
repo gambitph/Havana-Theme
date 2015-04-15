@@ -131,7 +131,7 @@ function regala_scripts() {
 	                                         
     // wp_enqueue_style( 'regala_fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     
-    wp_enqueue_script( 'regala-scroll-article', get_template_directory_uri() . '/js/scroll-article.js', array( 'jquery' ), '20150216', true );
+    //wp_enqueue_script( 'regala-scroll-article', get_template_directory_uri() . '/js/scroll-article.js', array( 'jquery' ), '20150216', true );
     // wp_enqueue_script( 'regala-background-picture', get_template_directory_uri() . '/js/background-picture.js', array( 'jquery' ), '20150216', true );
     
     // wp_enqueue_script( 'regala-hide-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20140404', true );

@@ -86,12 +86,12 @@ function regala_create_social_icons() {
 	}
 }
 
-function regala_get_home_caption() {
+function havana_get_home_caption() {
 	if ( ! class_exists( 'TitanFramework' ) ) {
 	    return;
 	}
 	
-	$titan = TitanFramework::getInstance( 'regala' );
+	$titan = TitanFramework::getInstance( 'havana' );
 	
 	if ( ! $titan->getOption( 'home_caption' ) ) {
 		return;

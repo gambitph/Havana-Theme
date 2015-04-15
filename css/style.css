@@ -936,7 +936,7 @@ input[type="search"] {
 .main-navigation .menu li {
   margin: auto 20px; }
 
-.main-navigation .menu ul ul {
+body .main-navigation ul ul {
   text-align: left; }
 
 .main-navigation .menu li li {
@@ -978,19 +978,10 @@ body.page #masthead, body.single #masthead, body.archive #masthead, body.search 
   position: relative; }
 
 #site-top {
-  position: absolute;
-  margin-top: 250px;
-  right: 0;
-  left: 0;
-  top: 0;
   text-align: center; }
 
 #site-top a {
-  background: none; }
-
-#site-top img {
-  height: 140px;
-  width: auto; }
+  transform: translateY(-350%); }
 
 .site-title, .site-logo-link {
   display: inline-block;

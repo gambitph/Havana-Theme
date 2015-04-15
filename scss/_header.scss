@@ -28,12 +28,20 @@ body.page, body.single, body.archive, body.search, body.error404 {
 	position: relative;
 }
 #site-top {
-	position: absolute;;
+	position: absolute;
+	margin-top: 250px;
+	right: 0;
+	left: 0;
 	top: 0;
-	right: 40px;
-	z-index: 1;
+	text-align: center;
 }
-
+#site-top a {
+    background: none;
+}
+#site-top img {
+    height: 140px;
+    width: auto;
+}
 .site-title, .site-logo-link {
 	display: inline-block;
     background: black;
