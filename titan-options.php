@@ -495,39 +495,111 @@ function havana_create_options() {
 	/**
 	 *   Sections
 	 */
-    
-    $havanaSections = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Sections', 'havana' ),
-        'panel' => __( 'Theme Options & Colors', 'havana' ),
-    ) );
-    
-    $sections = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Section 1', 'havana' ),
-        'panel' => __( 'Sections', 'havana' ),
-    ) );
-    
-    $sections->createOption( array(
-        'name' => __( 'Layout', 'havana' ),
-        'id' => 'section_1',
-        'type' => 'radio-image',
-        'options' => array(
-            'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
-            'layout2' => get_template_directory_uri() . '/images/header-image-default1.jpg',
-            'layout3' => get_template_directory_uri() . '/images/header-image-default2-thumb.jpg',
-            'layout4' => get_template_directory_uri() . '/images/header-image-default2.jpg',
-            'layout5' => get_template_directory_uri() . '/images/logo.png',
-            'layout6' => get_template_directory_uri() . '/images/site-icon.png',
-         ),
-    ) );    
-  
-    
-	
+         
+    for ( $sectionIndex = 1; $sectionIndex <= 5; $sectionIndex++ ) {
+        $sectionLayout = $titan->createThemeCustomizerSection( array(
+             'name' => sprintf(__( 'Section %d Layout ', 'havana' ), $sectionIndex ),
+             'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+          ) );
+          
+          $sectionLayout->createOption( array(
+              'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+              'id' => 'section_' . $sectionIndex . '_layout',
+              'type' => 'radio-image',
+              'options' => array(
+                  'layout1' => get_template_directory_uri() . '/images/header-image-default1-thumb.jpg',
+              ),
+          ) );
+        
+        for ( $boxIndex = 1; $boxIndex <= 4; $boxIndex++ ) {
+                           
+             $sectionBox = $titan->createThemeCustomizerSection( array(
+                 'name' => sprintf(__( 'Section %1$s - Box %2$s Content', 'havana' ), $sectionIndex, $boxIndex ),
+                 'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+              ) );
+              
+              $sectionBox->createOption( array(
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_post/page',
+                  'type' => 'select',
+                  'options' => array(
+                      '1' => 'Page',
+                      '2' => 'Post',
+                  ),
+                  'default' => '2',
+              ) );
+
+              $sectionBox->createOption( array(
+                  'name' => __( 'Background Image', 'havana' ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_bg_image',
+                  'type' => 'upload',
+              ) );
+
+              $sectionBox->createOption( array(
+                  'name' => __( 'Box Background Color', 'havana' ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_bg_color',
+                  'type' => 'color',
+                  'desc' => __( 'This color set the color of the box content', 'havana' ),
+                  'default' => '#FFFFFF',
+              	//'css' => 'p.tagline-description { color: value }',
+              ) );
+
+              $sectionBox->createOption( array(
+                  'name' => __( 'Box Title', 'havana' ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_text',
+                  'type' => 'text',
+              ) );
+
+              $sectionBox->createOption( array(
+                  'name' => __( 'Box Description', 'havana' ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_description',
+                  'type' => 'text',
+              ) );
+
+              $sectionBox->createOption( array(
+                  'name' => __( 'Box Border', 'havana' ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_border',
+                  'type' => 'select',
+                      'options' => array(
+                          '1' => 'Sample 1',
+                          '2' => 'Sample 2',
+                          '3' => 'Sample 3',
+                          '4' => 'Sample 4',
+                          '5' => 'Sample 5',
+                      ),
+                  'default' => '1',
+              ) );
+
+              $sectionBox->createOption( array(
+                  'name' => __( 'Hover Effect', 'havana' ),
+                  'panel' => sprintf(__('Section %d', 'havana'), $sectionIndex ),
+                  'id' => 'section_' . $sectionIndex . '_box_' . $boxIndex . '_effect',
+                  'type' => 'select',
+                      'options' => array(
+                          '1' => 'Zoom In',
+                          '2' => 'Zoom In',
+                          '3' => 'Zoom In',
+                          '4' => 'Zoom In',
+                          '5' => 'Zoom In',
+                      ),
+                  'default' => '1',
+              ) );
+              
+        }
+    }
+        
+       
     /**
      *   Color option for footer widgets
      */
     
     $footer = $titan->createThemeCustomizerSection( array(
-        'name' => __( 'Footer Widgets Area', 'havana' ),
+        'name' => __( 'Footer Widgets Area', 'havana' ), 
         'panel' => __( 'Theme Options & Colors', 'havana' ),
     ) );
     
