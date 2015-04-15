@@ -608,7 +608,7 @@ function havana_create_options() {
         'id' => 'footer_bg_color',
         'type' => 'color',
         'default' => '#FFFFFF',
-        'css' => '.site-footer { background: value }',
+        'css' => '.site-footer .site-info-container { background: value }',
     ) );
     
     $footer->createOption( array(
