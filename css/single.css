@@ -1,0 +1,10 @@
+.single #site-navigation {
+  padding-left: 70px; }
+
+body.single .site-logo-link {
+  position: absolute;
+  left: 50px;
+  margin: 0; }
+
+body.single #site-top img {
+  height: 70px; }
