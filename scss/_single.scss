@@ -17,10 +17,15 @@ body.single #site-top img {
     height: 70px;
 }
 
+body.single #site-top {
+    margin-top: 25px;
+}
+
 body.single #masthead {
     width: 50%;
     height: 100vh;
     float: left;
+    position: fixed;
 }
 
 body.single .site-main {
@@ -30,4 +35,8 @@ body.single .site-main {
     overflow-x: hidden;
     overflow-y: scroll;
     position: fixed;
+}
+
+body.single article.hentry {
+    padding-top: 80px;
 }

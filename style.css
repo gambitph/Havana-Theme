@@ -1929,10 +1929,14 @@ body.single #site-top a {
 body.single #site-top img {
   height: 70px; }
 
+body.single #site-top {
+  margin-top: 25px; }
+
 body.single #masthead {
   width: 50%;
   height: 100vh;
-  float: left; }
+  float: left;
+  position: fixed; }
 
 body.single .site-main {
   width: 50%;
@@ -1941,6 +1945,9 @@ body.single .site-main {
   overflow-x: hidden;
   overflow-y: scroll;
   position: fixed; }
+
+body.single article.hentry {
+  padding-top: 80px; }
 
 .site-title:visited, .site-title:visited:hover, .site-title:link, .site-title:link:hover, .site-title, .site-title:hover, .site-logo-link:visited, .site-logo-link:visited:hover, .site-logo-link:link, .site-logo-link:link:hover, .site-logo-link, .site-logo-link:hover {
   color: #FFFFFF; }
