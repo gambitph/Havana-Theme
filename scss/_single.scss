@@ -6,6 +6,10 @@ body.single #site-top a {
     position: absolute;
     left: 50px;
     margin: 0;
+    -webkit-transform: translateY(-20%);
+    -moz-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    -o-transform: translateY(-20%);
     transform: translateY(-20%);
 }
 
