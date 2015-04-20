@@ -1938,13 +1938,8 @@ body.single #masthead, body.page #masthead {
   float: left;
   position: fixed; }
 
-body.single .site-main, body.page .site-main {
-  width: 50%;
-  right: 0;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  position: fixed; }
+body.single #content {
+  margin-left: 50vw; }
 
 body.single article.hentry, body.page article.hentry {
   padding-top: 80px; }

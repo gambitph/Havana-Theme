@@ -145,6 +145,22 @@ if ( is_single() || is_page() ) {
 					$titan = TitanFramework::getInstance( 'regala' );
 					$title = $titan->getOption( 'menu_title' );
 				}
+				if ( is_single() || is_page() ) {
+				    ?>
+                	<div id="site-top">   
+                		<span class="social-navigation"><?php regala_create_social_icons() ?></span>
+
+                		<?php
+                		if ( function_exists( 'jetpack_the_site_logo' ) ) {
+                			jetpack_the_site_logo();
+                		} else {
+                			?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title site-logo-link" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a><?php
+                		}
+                		?>
+
+                	</div>
+                	<?php
+				}
 				?>
 				<h4><?php echo esc_html( $title ) ?></h4>
 			    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -165,21 +181,22 @@ if ( is_single() || is_page() ) {
 	/**
 	 * Logo & social icons
 	 */
-	?>
-	<div id="site-top">   
-		<span class="social-navigation"><?php regala_create_social_icons() ?></span>
+     if ( is_home() || is_front_page() || is_archive() || is_search() || is_404() ) {
+	    ?>
+    	<div id="site-top">   
+    		<span class="social-navigation"><?php regala_create_social_icons() ?></span>
 
-		<?php
-		if ( function_exists( 'jetpack_the_site_logo' ) ) {
-			jetpack_the_site_logo();
-		} else {
-			?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title site-logo-link" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a><?php
-		}
-		?>
+    		<?php
+    		if ( function_exists( 'jetpack_the_site_logo' ) ) {
+    			jetpack_the_site_logo();
+    		} else {
+    			?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title site-logo-link" rel="home"><?php esc_html( bloginfo( 'name' ) ); ?></a><?php
+    		}
+    		?>
 		
-	</div>
-	<?php
-		
+    	</div>
+    	<?php
+	}
 		
 	?>
 	<div id="content" class="site-content">
