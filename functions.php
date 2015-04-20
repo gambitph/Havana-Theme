@@ -93,23 +93,50 @@ add_action( 'after_setup_theme', 'regala_setup' );
 function regala_widgets_init() {
 	
 	register_sidebar( array(
-		'name'          => __( 'Frontpage Footer Widget', 'regala' ),
-		'id'            => 'footer-frontpage',
-		'description'   => __( 'The frontpage footer widget area', 'regala' ),
+		'name'          => __( 'Frontpage Footer Left Widget', 'regala' ),
+		'id'            => 'footer-frontpage-left',
+		'description'   => __( 'The frontpage footer left widget area', 'regala' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) ); 
+    register_sidebar( array(
+		'name'          => __( 'Frontpage Footer Middle Widget', 'regala' ),
+		'id'            => 'footer-frontpage-mid',
+		'description'   => __( 'The frontpage footer middle widget area', 'regala' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Innerpage Footer Widget', 'regala' ),
-		'id'            => 'footer-innerpage',
+		'name'          => __( 'Frontpage Footer Right Widget', 'regala' ),
+		'id'            => 'footer-frontpage-right',
+		'description'   => __( 'The frontpage footer right widget area', 'regala' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Innerpage Footer Left Widget', 'regala' ),
+		'id'            => 'footer-innerpage-left',
+		'description'   => __( 'The innerpage footer left widget area', 'regala' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Innerpage Footer Right Widget', 'regala' ),
+		'id'            => 'footer-innerpage-right',
 		'description'   => __( 'The innerpage footer widget area', 'regala' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
-	) ); 
+	) );
 }
 add_action( 'widgets_init', 'regala_widgets_init' );
 

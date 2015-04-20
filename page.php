@@ -30,8 +30,8 @@ get_header(); ?>
 		<?php endwhile; // end of the loop. ?>
         
         <?php get_sidebar( 'footer-innerpage' ) ?>
-        <?php get_footer(); ?>
-		
+        
 		</main><!-- #main -->
-		
+		<?php get_footer(); ?>
+        
 	</div><!-- #primary -->
