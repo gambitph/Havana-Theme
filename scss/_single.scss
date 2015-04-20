@@ -1,8 +1,8 @@
-body.single .main-menu {
+body.single .main-menu, body.page .main-menu {
     padding-left: 200px;
 }
 
-body.single #site-top a {
+body.single #site-top a, body.page #site-top a {
     position: absolute;
     left: 50px;
     margin: 0;
@@ -13,22 +13,22 @@ body.single #site-top a {
     transform: translateY(-20%);
 }
 
-body.single #site-top img {
+body.single #site-top img, body.page #site-top img {
     height: 70px;
 }
 
-body.single #site-top {
+body.single #site-top, body.page #site-top {
     margin-top: 25px;
 }
 
-body.single #masthead {
+body.single #masthead, body.page #masthead{
     width: 50%;
     height: 100vh;
     float: left;
     position: fixed;
 }
 
-body.single .site-main {
+body.single .site-main, body.page .site-main {
     width: 50%;
     right: 0;
     height: 100vh;
@@ -37,6 +37,6 @@ body.single .site-main {
     position: fixed;
 }
 
-body.single article.hentry {
+body.single article.hentry, body.page article.hentry {
     padding-top: 80px;
 }
