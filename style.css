@@ -1201,9 +1201,7 @@ footer .widget-grofile {
   text-align: center; }
 
 .footer-widgets {
-  max-width: 710px;
   margin: 0 auto 1.5em;
-  width: 80%;
   padding-top: 50px; }
 
 .footer-widgets #footer-frontpage,
@@ -1258,12 +1256,26 @@ body.single .padding {
  * Footer copyright
  */
 .site-info {
-  width: 80%;
-  max-width: 710px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1em 0;
   font-size: .8em;
   font-style: italic; }
+
+body.home .site-info .widget-area {
+  width: 400px;
+  display: inline-block;
+  padding: 0 30px; }
+
+body.page .footer-widgets {
+  padding: 0 40px;
+  max-width: 640px; }
+
+body.page .footer-widgets .widget-area {
+  width: 280px;
+  padding: 0 20px;
+  display: inline-block; }
 
 #site-navigation #main-menu .inner-menu .menu-widgets .widget_tag_cloud .tagcloud a {
   background: none;
@@ -1938,7 +1950,7 @@ body.single #masthead, body.page #masthead {
   float: left;
   position: fixed; }
 
-body.single #content {
+body.single #content, body.page #content {
   margin-left: 50vw; }
 
 body.single article.hentry, body.page article.hentry {
