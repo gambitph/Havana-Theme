@@ -952,7 +952,8 @@ body #site-navigation {
   padding-bottom: 20px;
   top: -20px;
   position: fixed;
-  z-index: 2; }
+  z-index: 2;
+  padding-top: 32px; }
 
 #site-navigation a, #site-navigation a:link, #site-navigation a:visited {
   display: block; }
@@ -986,7 +987,8 @@ body.page #masthead, body.single #masthead, body.archive #masthead, body.search 
   right: 0;
   left: 0;
   top: 0;
-  text-align: center; }
+  text-align: center;
+  padding-top: 32px; }
 
 #site-top a {
   background: none; }
