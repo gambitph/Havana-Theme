@@ -83,12 +83,14 @@ body.home .site-info .widget-area {
     padding: 0 30px;
 }
 
-body.page .footer-widgets {
+body.page .footer-widgets,
+body.single .footer-widgets {
     padding: 0 40px;
     max-width: 640px;
 }
 
-body.page .footer-widgets .widget-area {
+body.page .footer-widgets .widget-area,
+body.single .footer-widgets .widget-area {
     width: 280px;
     padding: 0 20px;
     display: inline-block;
