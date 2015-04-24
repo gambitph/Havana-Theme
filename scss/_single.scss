@@ -1,5 +1,7 @@
 body.single .main-menu, body.page .main-menu {
-    padding-left: 200px;
+   max-width: 1000px;
+   right: 0;
+   float: right;
 }
 
 body.single #site-top a, body.page #site-top a {
@@ -18,7 +20,7 @@ body.single #site-top img, body.page #site-top img {
 }
 
 body.single #site-top, body.page #site-top {
-    margin-top: 25px;
+    margin-top: 22px;
 }
 
 body.single #masthead, body.page #masthead{

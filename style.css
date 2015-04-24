@@ -954,6 +954,9 @@ body #site-navigation {
   position: fixed;
   z-index: 2; }
 
+#site-navigation a, #site-navigation a:link, #site-navigation a:visited {
+  display: block; }
+
 header#masthead, body.home header#masthead, body.home.page header#masthead {
   height: 100vh;
   min-height: 600px; }
@@ -1926,7 +1929,9 @@ body .saboxplugin-wrap {
   body .saboxplugin-wrap > div[class*=saboxplugin] {
     text-align: center; } }
 body.single .main-menu, body.page .main-menu {
-  padding-left: 200px; }
+  max-width: 1000px;
+  right: 0;
+  float: right; }
 
 body.single #site-top a, body.page #site-top a {
   position: absolute;
@@ -1942,7 +1947,7 @@ body.single #site-top img, body.page #site-top img {
   height: 70px; }
 
 body.single #site-top, body.page #site-top {
-  margin-top: 25px; }
+  margin-top: 22px; }
 
 body.single #masthead, body.page #masthead {
   width: 50%;

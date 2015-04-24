@@ -45,3 +45,7 @@ body #site-navigation {
     position: fixed;
     z-index: 2;
 }
+
+#site-navigation a, #site-navigation a:link, #site-navigation a:visited {
+    display: block;
+}
