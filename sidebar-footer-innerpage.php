@@ -26,6 +26,4 @@ if ( is_active_sidebar( 'footer-innerpage-right' ) ) {
 		<?php dynamic_sidebar( 'footer-innerpage-right' ); ?>
 	</div><?php
 }
-?>
-
-</div>
+?></div>
