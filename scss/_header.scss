@@ -34,12 +34,13 @@ body.page, body.single, body.archive, body.search, body.error404 {
 	left: 0;
 	top: 0;
 	text-align: center;
+	padding-top: 32px;
 }
 #site-top a {
     background: none;
 }
 #site-top img {
-    height: 140px;
+    height: 100px;
     width: auto;
 }
 .site-title, .site-logo-link {

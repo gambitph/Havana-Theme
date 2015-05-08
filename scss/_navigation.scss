@@ -45,3 +45,11 @@ body #site-navigation {
     position: fixed;
     z-index: 2;
 }
+
+body.admin-bar #site-navigation {
+    padding-top: 32px;
+}
+
+#site-navigation a, #site-navigation a:link, #site-navigation a:visited {
+    display: block;
+}

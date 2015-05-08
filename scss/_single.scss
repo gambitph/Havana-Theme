@@ -1,5 +1,7 @@
 body.single .main-menu, body.page .main-menu {
-    padding-left: 200px;
+   max-width: 1000px;
+   right: 0;
+   float: right;
 }
 
 body.single #site-top a, body.page #site-top a {
@@ -18,9 +20,13 @@ body.single #site-top img, body.page #site-top img {
 }
 
 body.single #site-top, body.page #site-top {
-    margin-top: 25px;
+    margin-top: 22px;
+    padding-top: 0;
 }
 
+body.single.admin-bar #site-top, body.page.admin-bar #site-top {
+    padding-top: 32px;
+}
 body.single #masthead, body.page #masthead{
     width: 50%;
     height: 100vh;
@@ -28,7 +34,7 @@ body.single #masthead, body.page #masthead{
     position: fixed;
 }
 
-body.single #content {
+body.single #content, body.page #content {
     margin-left: 50vw;
 }
 
