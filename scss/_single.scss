@@ -21,8 +21,12 @@ body.single #site-top img, body.page #site-top img {
 
 body.single #site-top, body.page #site-top {
     margin-top: 22px;
+    padding-top: 0;
 }
 
+body.single.admin-bar #site-top, body.page.admin-bar #site-top {
+    padding-top: 32px;
+}
 body.single #masthead, body.page #masthead{
     width: 50%;
     height: 100vh;
