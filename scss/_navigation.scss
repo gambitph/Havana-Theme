@@ -45,3 +45,11 @@ body #site-navigation {
     position: fixed;
     z-index: 2;
 }
+
+body.home .main-navigation ul {
+    text-align: center;
+}
+
+body.home .main-navigation li {
+    text-align: left;
+}

@@ -954,6 +954,12 @@ body #site-navigation {
   position: fixed;
   z-index: 2; }
 
+body.home .main-navigation ul {
+  text-align: center; }
+
+body.home .main-navigation li {
+  text-align: left; }
+
 header#masthead, body.home header#masthead, body.home.page header#masthead {
   height: 100vh;
   min-height: 600px; }
