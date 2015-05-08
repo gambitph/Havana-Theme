@@ -18,25 +18,19 @@ $activeSidebars += is_active_sidebar( 'footer-frontpage-right' ) ? 1 : 0;
 
 <?php
 if ( is_active_sidebar( 'footer-frontpage-left' ) ) {
-	?>
-	<div id="footer-frontpage-left" class="widget-area" role="complementary">
+	?><div id="footer-frontpage-left" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'footer-frontpage-left' ); ?>
-	</div><!-- #footer-left -->
-	<?php
+	</div><?php
 }
 if ( is_active_sidebar( 'footer-frontpage-mid' ) ) {
-	?>
-	<div id="footer-frontpage-mid" class="widget-area" role="complementary">
+	?><div id="footer-frontpage-mid" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'footer-frontpage-mid' ); ?>
-	</div><!-- #footer-mid -->
-	<?php
+	</div><?php
 }
 if ( is_active_sidebar( 'footer-frontpage-right' ) ) {
-	?>
-	<div id="footer-frontpage-right" class="widget-area" role="complementary">
+	?><div id="footer-frontpage-right" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'footer-frontpage-right' ); ?>
-	</div><!-- #footer-right -->
-	<?php
+	</div><?php
 }
 ?>
 
