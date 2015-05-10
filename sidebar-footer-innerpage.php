@@ -17,20 +17,13 @@ $activeSidebars += is_active_sidebar( 'footer-innerpage-right' ) ? 1 : 0;
 
 <?php
 if ( is_active_sidebar( 'footer-innerpage-left' ) ) {
-	?>
-	<div id="footer-innerpage-left" class="widget-area" role="complementary">
+	?><div id="footer-innerpage-left" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'footer-innerpage-left' ); ?>
-	</div><!-- #footer-left -->
-	<?php
+	</div><?php
 }
 if ( is_active_sidebar( 'footer-innerpage-right' ) ) {
-	?>
-	<div id="footer-innerpage-right" class="widget-area" role="complementary">
+	?><div id="footer-innerpage-right" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'footer-innerpage-right' ); ?>
-	</div><!-- #footer-right -->
-	<?php
+	</div><?php
 }
-
-?>
-
-</div>
+?></div>

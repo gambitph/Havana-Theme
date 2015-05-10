@@ -28,10 +28,33 @@ body.single #masthead, body.page #masthead{
     position: fixed;
 }
 
-body.single #content {
+body.single #content, body.page #content {
     margin-left: 50vw;
 }
 
 body.single article.hentry, body.page article.hentry {
     padding-top: 80px;
+}
+
+body.error404 header h1,
+body.search header h1,
+body.archive header h1,
+body.search-no-results header h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+    padding-top: 50px;
+}
+
+body.error404 #site-top img,
+body.search #site-top img,
+body.search-no-results #site-top img,
+body.archive #site-top img, {
+    height: 120px;
+}
+
+body.error404 #site-top,
+body.search #site-top,
+body.search-no-results #site-top,
+body.archive #site-top {
+    margin-top: 100px;
 }

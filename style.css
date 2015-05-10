@@ -1201,9 +1201,7 @@ footer .widget-grofile {
   text-align: center; }
 
 .footer-widgets {
-  max-width: 710px;
   margin: 0 auto 1.5em;
-  width: 80%;
   padding-top: 50px; }
 
 .footer-widgets #footer-frontpage,
@@ -1258,12 +1256,34 @@ body.single .padding {
  * Footer copyright
  */
 .site-info {
-  width: 80%;
-  max-width: 710px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1em 0;
   font-size: .8em;
   font-style: italic; }
+
+body.home .site-info .widget-area,
+body.error404 .site-info .widget-area,
+body.search-no-results .site-info .widget-area,
+body.archive .site-info .widget-area,
+body.search .site-info .widget-area {
+  width: 400px;
+  display: inline-block;
+  padding: 0 30px;
+  float: left; }
+
+body.page .footer-widgets,
+body.single .footer-widgets {
+  padding: 0 40px;
+  max-width: 640px; }
+
+body.page .footer-widgets .widget-area,
+body.single .footer-widgets .widget-area {
+  width: 280px;
+  padding: 0 20px;
+  display: inline-block;
+  float: left; }
 
 #site-navigation #main-menu .inner-menu .menu-widgets .widget_tag_cloud .tagcloud a {
   background: none;
@@ -1938,11 +1958,31 @@ body.single #masthead, body.page #masthead {
   float: left;
   position: fixed; }
 
-body.single #content {
+body.single #content, body.page #content {
   margin-left: 50vw; }
 
 body.single article.hentry, body.page article.hentry {
   padding-top: 80px; }
+
+body.error404 header h1,
+body.search header h1,
+body.archive header h1,
+body.search-no-results header h1 {
+  font-size: 40px;
+  margin-bottom: 0;
+  padding-top: 50px; }
+
+body.error404 #site-top img,
+body.search #site-top img,
+body.search-no-results #site-top img,
+body.archive #site-top img {
+  height: 120px; }
+
+body.error404 #site-top,
+body.search #site-top,
+body.search-no-results #site-top,
+body.archive #site-top {
+  margin-top: 100px; }
 
 .site-title:visited, .site-title:visited:hover, .site-title:link, .site-title:link:hover, .site-title, .site-title:hover, .site-logo-link:visited, .site-logo-link:visited:hover, .site-logo-link:link, .site-logo-link:link:hover, .site-logo-link, .site-logo-link:hover {
   color: #FFFFFF; }
